@@ -8,7 +8,7 @@
 
 	<!-- Details Modal -->
 
-<?php include('includes/detailsmodal.php');  ?>
+
 	<script>
 		// Target the window
 		$(window).scroll(function() {
