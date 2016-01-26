@@ -146,7 +146,12 @@
 				give it cols -->
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-sm-6"></div>
+						<div class="col-sm-6">
+							<!-- to wrap image around -->
+							<div class="center-block">
+								<img src="images/products/men4.png" alt="Levis Jeans" class="details img-responsive">
+							</div>
+						</div>
 						<div class="col-sm-6"></div>
 					</div>
 				</div>
