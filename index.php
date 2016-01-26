@@ -160,6 +160,9 @@
 								<hr>
 								<p>Price: $34.99</p>
 								<p>Brand: Levis</p>
+								<form action="add_cart.php" method="post">
+									
+								</form>
 							</div>
 						</div>
 					</div>
