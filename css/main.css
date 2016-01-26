@@ -54,3 +54,8 @@ body {
 	so making the img heights the same will help in this case */
 	height: 200px;
 }
+
+#footer {
+	margin-top: 50px;
+	
+}
