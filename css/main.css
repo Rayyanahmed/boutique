@@ -20,3 +20,13 @@ body {
 	/* Really cool, this keeps the background image fixed as we scroll */
 	background-attachment: fixed;
 }
+
+#logotext {
+	/* nested within our relative div, looking for the first parent div that is positioned relative */
+	position: absolute;
+	width: 100%;
+	height: 180px;
+	background-image: url(../images/headerlogo/text.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
