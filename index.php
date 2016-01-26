@@ -28,8 +28,8 @@ $featured = mysqli_query($db, $sql);
 					<h4><?php echo $row['title']; ?></h4>
 					<img src="images/products/men4.png" alt="Levis Jeans" class="img-thumb"/>
 					<!-- All these classes so we can target later -->
-					<p class="list-price text-danger">List Price <s>$54.99</s></p>
-					<p class="price">Our Price: 19.99</p>
+					<p class="list-price text-danger">List Price <s>$<?php echo $row['list_price']; ?></s></p>
+					<p class="price">Our Price: <?php echo $row['price']; ?></p>
 					<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-1">Details</button>
 				</div>
 			<?php endwhile; ?>
