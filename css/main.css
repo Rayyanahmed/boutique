@@ -16,4 +16,7 @@ body {
 	/* width of 100% and height of 600px can play around with the height this */
 	/* remember this image goes inside the headerWrapper */
 	background-size: 100% 600px;
+	background-position: top center;
+	/* Really cool, this keeps the background image fixed as we scroll */
+	background-attachment: fixed;
 }
