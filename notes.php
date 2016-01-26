@@ -13,4 +13,6 @@
 // Added Men, Women, Girls, Boys in our categories table. These will be our top level menu items
 // changed parent column in the category table to parent_id, this will correlate to the ID of your parent category
 
+// Added a bunch of sub categories with corresponding parent_id's
+
 ?>
