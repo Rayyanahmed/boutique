@@ -40,5 +40,4 @@ $featured = mysqli_query($db, $sql);
 		<!-- right sidebar -->
 <?php include('includes/rightbar.php'); ?>
 
-
 <?php include('includes/footer.php'); ?>
