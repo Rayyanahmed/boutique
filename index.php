@@ -9,6 +9,7 @@
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 </head>
 <body>
+	<!-- Top Nav Bar -->
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<a href="index.php" class="navbar-brand">Shaunta's Boutique</a>
@@ -25,5 +26,13 @@
 			</ul>
 		</div>
 	</nav>
+
+	<!--  Header  -->
+
+	<div id="headerWrapper">
+		<div id="back-flower"></div>
+		<div id="logotext"></div>
+		<div id="for-flower"></div>
+	</div>
 </body>
 </html>
