@@ -168,7 +168,7 @@
 											<input type="text" class="form-control" id="quantity" name="quantity">
 										</div>
 										<p>Available: 3</p>
-									</div>
+									</div><br><br>
 									<div class="form-group">
 										<label for="size"></label>
 										<select name="size" id="size" class="form-control">Size
