@@ -130,6 +130,11 @@
 		&copy; Copyright 2013-15 Shaundas Boutique
 	</footer>
 
+	<!-- Details Modal -->
+
+	<div class="modal fade details-1" id="details-1" tabindex="-1" role="dialog" aria-label="details-1" aria-hidden="true">
+		
+	</div>
 
 	<script>
 		// Target the window
