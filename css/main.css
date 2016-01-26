@@ -12,4 +12,8 @@ body {
 	overflow: hidden;
 	height: 600px;
 	background-image: url(../images/headerlogo/background.png);
+	background-repeat: no-repeat;
+	/* width of 100% and height of 600px can play around with the height this */
+	/* remember this image goes inside the headerWrapper */
+	background-size: 100% 600px;
 }
