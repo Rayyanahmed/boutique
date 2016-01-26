@@ -13,7 +13,9 @@ $parent_query = mysqli_query($db, $sql);
 			<a href="index.php" class="navbar-brand">Shaunta's Boutique</a>
 			<ul class="nav navbar-nav">
 				<?php while($row = mysqli_fetch_assoc($parent_query)) : ?>
-				<?php $parent_id = $row['parent_id']; ?>
+				<?php $parent_id = $row['parent_id']; 
+					  $sql2 = "SELECT * FROM categories WHERE parent_id == '$parent_id'"
+				?>
 		
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $row['category']; ?><span class="caret"></span></a>
