@@ -161,7 +161,14 @@
 								<p>Price: $34.99</p>
 								<p>Brand: Levis</p>
 								<form action="add_cart.php" method="post">
-									
+									<div class="form-group">
+										<!-- Allows us to control width of input -->
+										<div class="col-xs-3">
+											<label for="quantity">Quantity</label>
+											<input type="text" class="form-control" id="quantity" name="quantity">
+											<p>Available: 3</p>
+										</div>
+									</div>
 								</form>
 							</div>
 						</div>
