@@ -47,3 +47,10 @@ body {
 	right: -50px;
 }
 
+.img-thumb {
+	width: auto;
+	/* height is the important one remember we have the columns divided by bootstrap classes
+	where there are four cols dividing each row, each row however can be as tall as it wants
+	so making the img heights the same will help in this case */
+	height: 200px;
+}

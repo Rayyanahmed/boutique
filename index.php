@@ -47,7 +47,7 @@
 				<h2 class="text-center">Featured Products</h2>
 				<div class="col-md-3">
 					<h4>Levis Jeans</h4>
-					<img src="images/products/men4.png" alt="Levis Jeans" />
+					<img src="images/products/men4.png" alt="Levis Jeans" class="img-thumb"/>
 					<!-- All these classes so we can target later -->
 					<p class="list-price text-danger">List Price <s>$54.99</s></p>
 					<p class="price">Our Price: 19.99</p>
@@ -56,7 +56,7 @@
 
 				<div class="col-md-3">
 					<h4>Hollister Shirt</h4>
-					<img src="images/products/men1.png" alt="Hollister shirt" />
+					<img src="images/products/men1.png" alt="Hollister shirt" class="img-thumb"/>
 					<!-- All these classes so we can target later -->
 					<p class="list-price text-danger">List Price <s>$25.99</s></p>
 					<p class="price">Our Price: 19.99</p>
@@ -65,7 +65,7 @@
 
 				<div class="col-md-3">
 					<h4>Fancy Shoes</h4>
-					<img src="images/products/women6.png" alt="Fancy Shoes" />
+					<img src="images/products/women6.png" alt="Fancy Shoes" class="img-thumb"/>
 					<!-- All these classes so we can target later -->
 					<p class="list-price text-danger">List Price <s>$69.99</s></p>
 					<p class="price">Our Price: 49.99</p>
