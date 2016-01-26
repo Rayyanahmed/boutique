@@ -28,4 +28,6 @@
 
 // Forgot to click out of the database, so when I set Levi's (my only seeded product so far) column featured = 1 it did not
 // save, therefore nothing was showing, I clicked out, featured got set to 1 and now it displays properly
+
+// Notes, figure out how to save absolute vs relative paths for image sources in the database
 ?>
