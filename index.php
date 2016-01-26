@@ -7,7 +7,7 @@
 <?php include('includes/headerfull.php'); ?>
 		<!-- Remember you can do any combination as long as they add up to 12 -->
 		<!-- This will be the left sidebar -->
-		<div class="col-md-2"></div>
+<?php include('includes/leftsidebar.php');  ?>
 		<!-- main content -->
 		<div class="col-md-8">
 			<div class="row">
