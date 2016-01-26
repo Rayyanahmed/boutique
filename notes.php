@@ -15,4 +15,6 @@
 
 // Added a bunch of sub categories with corresponding parent_id's
 
+// Added a brands item "Levis"
+
 ?>
