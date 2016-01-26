@@ -152,9 +152,20 @@
 								<img src="images/products/men4.png" alt="Levis Jeans" class="details img-responsive">
 							</div>
 						</div>
-						<div class="col-sm-6"></div>
+						<div class="col-sm-6">
+							<h4>Details</h4>
+							<p>These jeans are amazing, they are straight-leg, fit great
+								and look sexy. Get a pair while they last.</p>
+							<hr>
+							<p>Price: $34.99</p>
+							<p>Brand: Levis</p>
+						</div>
 					</div>
 				</div>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-default" data-dismiss="modal">Close</button>
+				<button class="btn btn-warning" type="submit" class="glyphicon glyphicon-shopping-cart"><span>Add to Cart</span></button>
 			</div>
 		</div>
 	</div>
