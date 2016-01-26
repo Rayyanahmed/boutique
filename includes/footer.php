@@ -28,7 +28,16 @@
 		});
 
 		function detailsModal(id) {
-			alert(id);
+			var data = {"id" : id, };
+			$(this).ajax({
+				url : "url",
+				// by default this method will be get
+				// this will post whatever we sent it
+				method : "post",
+				data : data,
+				success: function() {},
+				error: function() {}
+			});
 		}
 
 	</script>
