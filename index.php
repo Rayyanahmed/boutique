@@ -11,12 +11,18 @@
 		<!-- This will be the left sidebar -->
 <?php include('includes/leftsidebar.php');  ?>
 
+<?php 
+
+$sql = "SELECT * FROM products WHERE featured = 1";
+
+?>
+
 
 		<!-- main content -->
 		<div class="col-md-8">
 			<div class="row">
 				<h2 class="text-center">Featured Products</h2>
-				
+
 				<div class="col-md-3">
 					<h4>Levis Jeans</h4>
 					<img src="images/products/men4.png" alt="Levis Jeans" class="img-thumb"/>
