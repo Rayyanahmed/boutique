@@ -30,7 +30,7 @@ $featured = mysqli_query($db, $sql);
 					<!-- All these classes so we can target later -->
 					<p class="list-price text-danger">List Price <s>$<?php echo $row['list_price']; ?></s></p>
 					<p class="price">Our Price: <?php echo $row['price']; ?></p>
-					<button type="button" class="btn btn-sm btn-success" onclick="detailsmodal()">Details</button>
+					<button type="button" class="btn btn-sm btn-success" onclick="detailsModal()">Details</button>
 				</div>
 			<?php endwhile; ?>
 			</div>

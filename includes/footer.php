@@ -27,6 +27,10 @@
 			});
 		});
 
+		function detailsModal() {
+			alert("yay it worked!");
+		}
+
 	</script>
 </body>
 </html>
