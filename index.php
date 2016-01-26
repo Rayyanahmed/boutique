@@ -9,6 +9,15 @@
 	<script type="text/javascript src=js/bootstrap.min.js"></script>
 </head>
 <body>
-	<nav class="navbar navbar-default navbar-fixed-top"></nav>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<a href="index.php" class="navbar-brand">Shaunta's Boutique</a>
+			<ul class="nav navbar-nav">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Men<span class="caret"></span></a>
+				</li>
+			</ul>
+		</div>
+	</nav>
 </body>
 </html>
