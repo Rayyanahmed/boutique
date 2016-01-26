@@ -74,7 +74,7 @@
 
 				<div class="col-md-3">
 					<h4>Boys Hoodie</h4>
-					<img src="images/products/men4.png" alt="Boy's Hoodie" class="img-thumb"/>
+					<img src="images/products/boys1.png" alt="Boy's Hoodie" class="img-thumb"/>
 					<!-- All these classes so we can target later -->
 					<p class="list-price text-danger">List Price <s>$24.99</s></p>
 					<p class="price">Our Price: 18.99</p>
@@ -101,7 +101,7 @@
 
 				<div class="col-md-3">
 					<h4>Woman's Shirt</h4>
-					<img src="images/products/women7.png" alt="Woman's Shirt" class="img-thumb"/>
+					<img src="images/products/women3.png" alt="Woman's Shirt" class="img-thumb"/>
 					<!-- All these classes so we can target later -->
 					<p class="list-price text-danger">List Price <s>$45.99</s></p>
 					<p class="price">Our Price: 29.99</p>
@@ -124,6 +124,11 @@
 		<div class="col-md-2"></div>
 	</div>
 
+	<!-- Lets add a footer outside the main-page div because we want the footer to be full page as well 
+		id is to use later for css -->
+	<footer class="text-center" id="footer">
+		&copy; Copyright 2013-15 Shaundas Boutique
+	</footer>
 
 
 	<script>
