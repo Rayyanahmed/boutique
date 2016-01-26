@@ -34,5 +34,14 @@
 		<div id="logotext"></div>
 		<div id="fore-flower"></div>
 	</div>
+
+	<script>
+		// Target the window
+		$(window).scroll(function() {
+			// scrollTop tells us how many pixels we have scrolled from the top
+			var vscroll = $(this).scrollTop();
+			console.log(vscroll);
+		});
+	</script>
 </body>
 </html>
