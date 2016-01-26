@@ -30,9 +30,8 @@
 		function detailsModal(id) {
 			var data = {"id" : id, };
 			$(this).ajax({
-				url : "url",
-				// by default this method will be get
-				// this will post whatever we sent it
+				url : <?php echo BASEURL; ?> + 'includes/detailmodal.php',
+				// Will send this data to the baseurl
 				method : "post",
 				data : data,
 				success: function() {},
