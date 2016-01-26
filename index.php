@@ -40,7 +40,11 @@
 		$(window).scroll(function() {
 			// scrollTop tells us how many pixels we have scrolled from the top
 			var vscroll = $(this).scrollTop();
-			console.log(vscroll);
+			// this function will keep the text logo centered while we scroll
+			// if we didn't divide by 2 it would just stay there and not move at all
+			$('#logotext').css({
+				"transform" : "translate(0px, " + vscroll/2 + "px)"
+			});
 		});
 	</script>
 </body>
