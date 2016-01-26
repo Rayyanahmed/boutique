@@ -74,7 +74,7 @@
 
 				<div class="col-md-3">
 					<h4>Boys Hoodie</h4>
-					<img src="images/products/men4.png" alt="Boy's Hoodie" />
+					<img src="images/products/men4.png" alt="Boy's Hoodie" class="img-thumb"/>
 					<!-- All these classes so we can target later -->
 					<p class="list-price text-danger">List Price <s>$24.99</s></p>
 					<p class="price">Our Price: 18.99</p>
@@ -83,7 +83,7 @@
 
 				<div class="col-md-3">
 					<h4>Levis Jeans</h4>
-					<img src="images/products/men4.png" alt="Levis Jeans" />
+					<img src="images/products/men4.png" alt="Levis Jeans" class="img-thumb"/>
 					<!-- All these classes so we can target later -->
 					<p class="list-price text-danger">List Price <s>$54.99</s></p>
 					<p class="price">Our Price: 19.99</p>
@@ -92,7 +92,7 @@
 
 				<div class="col-md-3">
 					<h4>Girls Dress</h4>
-					<img src="images/products/men4.png" alt="Girls Dress" />
+					<img src="images/products/men4.png" alt="Girls Dress" class="img-thumb"/>
 					<!-- All these classes so we can target later -->
 					<p class="list-price text-danger">List Price <s>$34.99</s></p>
 					<p class="price">Our Price: $22.99</p>
@@ -101,7 +101,7 @@
 
 				<div class="col-md-3">
 					<h4>Woman's Shirt</h4>
-					<img src="images/products/women7.png" alt="Woman's Shirt" />
+					<img src="images/products/women7.png" alt="Woman's Shirt" class="img-thumb"/>
 					<!-- All these classes so we can target later -->
 					<p class="list-price text-danger">List Price <s>$45.99</s></p>
 					<p class="price">Our Price: 29.99</p>
@@ -110,7 +110,7 @@
 
 				<div class="col-md-3">
 					<h4>Women's Skirt</h4>
-					<img src="images/products/girls3.png" alt="Woman's Skirt" />
+					<img src="images/products/girls3.png" alt="Woman's Skirt" class="img-thumb"/>
 					<!-- All these classes so we can target later -->
 					<p class="list-price text-danger">List Price <s>$29.99</s></p>
 					<p class="price">Our Price: 19.99</p>
