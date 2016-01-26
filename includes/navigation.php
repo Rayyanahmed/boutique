@@ -1,6 +1,9 @@
 <?php 
 
 $sql = "SELECT * FROM categories WHERE parent = 0";
+// This takes the database object which has already been included at top of index.php and 
+// we will call the query method on it with a parameter of the $sql statement
+$parent_query = $db->query($sql);
 
 ?>
 
