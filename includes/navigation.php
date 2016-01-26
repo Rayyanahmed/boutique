@@ -12,7 +12,7 @@ $parent_query = $db->query($sql);
 		<div class="container">
 			<a href="index.php" class="navbar-brand">Shaunta's Boutique</a>
 			<ul class="nav navbar-nav">
-				<?php while($parent = $parent_query->mysqli_fetch_assoc()) : ?>
+				<?php while($parent = mysqli_fetch_assoc($parent_query)) : ?>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Men<span class="caret"></span></a>
 					<ul class="dropdown-menu" role="menu">
