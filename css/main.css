@@ -1,0 +1,15 @@
+body {
+	padding-top: 50px;
+}
+
+#headerWrapper {
+	/* this needs to be relative because divs in here will have to be positioned absolutely */
+	/* we are going to position things inside this relative to this position */
+	position: relative;
+	padding: 0;
+	margin: 0;
+	/* prevents a scroll bar */
+	overflow: hidden;
+	height: 600px;
+	background-image: url(../images/headerlogo/background.png);
+}
