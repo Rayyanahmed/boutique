@@ -7,6 +7,7 @@ if(mysqli_connect_errno($db)) {
 	die();
 }
 
+define('BASEURL', '/boutique/');
 
 
 ?>
