@@ -141,6 +141,14 @@
 				<!-- all going to be dynamic later -->
 				<h4 class="modal-title" class="text-center">Levis Jeans</h4>
 			</div>
+			<div class="modal-body">
+				<!-- we are going to put container fluid inside the modal body so we can
+				give it cols -->
+				<div class="container-fluid">
+					<div class="row">
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 
