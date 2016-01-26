@@ -42,7 +42,14 @@
 		<!-- This will be the left sidebar -->
 		<div class="col-md-2"></div>
 		<!-- main content -->
-		<div class="col-md-8"></div>
+		<div class="col-md-8">
+			<div class="row">
+				<h2 class="text-center">Featured Products</h2>
+				<div class="col-md-3">
+					<h4>Levis Jeans</h4>
+				</div>
+			</div>
+		</div>
 		<!-- right sidebar -->
 		<div class="col-md-2"></div>
 	</div>
