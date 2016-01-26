@@ -38,6 +38,13 @@
 	<!-- Going to put entire page in here. class container- fluid allows us -->
 	<!-- to take advantage of the grid system -->
 	<div class="container-fluid">
+		<!-- Remember you can do any combination as long as they add up to 12 -->
+		<!-- This will be the left sidebar -->
+		<div class="col-md-2"></div>
+		<!-- main content -->
+		<div class="col-md-8"></div>
+		<!-- right sidebar -->
+		<div class="col-md-2"></div>
 	</div>
 
 
