@@ -20,4 +20,9 @@
 
 // Added some forgotten columns to our products table. Added a sizes column and added a features column which 
 // will be a boolean. If the product is featured it will show up on our homepage, otherwise it will not
+
+// Most products will be under sub categories. Take Levi's jeans for example. We know that this is a mens product
+// which is a top level category. We also know that it is going to be under the pants subcategory
+// So lets look for pants where the parent_id is related to mens primary key.
+// So levis category_id will be whatever pants under mens primary key is
 ?>
