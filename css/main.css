@@ -57,5 +57,12 @@ body {
 
 #footer {
 	margin-top: 50px;
-	
+
+}
+
+img.details {
+	/* width of 33% of its container */
+	width: 33%;
+	margin: 15px auto;
+	/* centers the image on the modal */
 }
