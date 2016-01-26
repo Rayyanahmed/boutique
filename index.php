@@ -166,7 +166,7 @@
 										<div class="col-xs-3">
 											<label for="quantity">Quantity</label>
 											<input type="text" class="form-control" id="quantity" name="quantity">
-										</div>
+										</div><div class="col-xs-9"></div>
 										<p>Available: 3</p>
 									</div><br><br>
 									<div class="form-group">
