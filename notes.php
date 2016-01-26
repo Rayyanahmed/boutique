@@ -25,4 +25,7 @@
 // which is a top level category. We also know that it is going to be under the pants subcategory
 // So lets look for pants where the parent_id is related to mens primary key.
 // So levis category_id will be whatever pants under mens primary key is
+
+// Forgot to click out of the database, so when I set Levi's (my only seeded product so far) column featured = 1 it did not
+// save, therefore nothing was showing, I clicked out, featured got set to 1 and now it displays properly
 ?>

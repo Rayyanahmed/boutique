@@ -25,7 +25,7 @@ $featured = mysqli_query($db, $sql);
 				<h2 class="text-center">Featured Products</h2>
 				<?php while($row = mysqli_fetch_assoc($featured)) : ?>
 				<div class="col-md-3">
-					<h4>Levis Jeans</h4>
+					<h4><?php echo $row['title']; ?></h4>
 					<img src="images/products/men4.png" alt="Levis Jeans" class="img-thumb"/>
 					<!-- All these classes so we can target later -->
 					<p class="list-price text-danger">List Price <s>$54.99</s></p>
