@@ -34,6 +34,13 @@
 		<div id="logotext"></div>
 		<div id="fore-flower"></div>
 	</div>
+	
+	<!-- Going to put entire page in here. class container- fluid allows us -->
+	<!-- to take advantage of the grid system -->
+	<div class="container-fluid">
+	</div>
+
+
 
 	<script>
 		// Target the window
@@ -45,7 +52,14 @@
 			$('#logotext').css({
 				"transform" : "translate(0px, " + vscroll/2 + "px)"
 			});
+
+			var vscroll = $(this).scrollTop();
+			$('#fore-flower').css({
+				// the negative makes it scroll up
+				"transform" : "translate(0px, -" + vscroll/2 + "px)"
+			});
 		});
+
 	</script>
 </body>
 </html>
