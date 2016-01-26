@@ -27,8 +27,8 @@
 			});
 		});
 
-		function detailsModal() {
-			alert("yay it worked!");
+		function detailsModal(id) {
+			alert(id);
 		}
 
 	</script>
