@@ -166,8 +166,17 @@
 										<div class="col-xs-3">
 											<label for="quantity">Quantity</label>
 											<input type="text" class="form-control" id="quantity" name="quantity">
-											<p>Available: 3</p>
 										</div>
+										<p>Available: 3</p>
+									</div>
+									<div class="form-group">
+										<label for="size"></label>
+										<select name="size" id="size" class="form-control">Size
+											<option value=""></option>
+											<option value="28">28</option>
+											<option value="32">32</option>
+											<option value="36">36</option>
+										</select>
 									</div>
 								</form>
 							</div>
