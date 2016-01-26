@@ -26,7 +26,7 @@ $featured = mysqli_query($db, $sql);
 				<?php while($row = mysqli_fetch_assoc($featured)) : ?>
 				<div class="col-md-3">
 					<h4><?php echo $row['title']; ?></h4>
-					<img src="images/products/men4.png" alt="Levis Jeans" class="img-thumb"/>
+					<img src="<?php echo $row['image']; ?>" alt="Levis Jeans" class="img-thumb"/>
 					<!-- All these classes so we can target later -->
 					<p class="list-price text-danger">List Price <s>$<?php echo $row['list_price']; ?></s></p>
 					<p class="price">Our Price: <?php echo $row['price']; ?></p>
