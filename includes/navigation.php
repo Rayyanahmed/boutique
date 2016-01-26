@@ -22,7 +22,7 @@ $parent_query = $db->query($sql);
 						<li><a href="#">Accessories</a></li>
 					</ul>
 				</li>
-				?>
+				<?php endwhile; ?>
 			</ul>
 		</div>
 	</nav>
