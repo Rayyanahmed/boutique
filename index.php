@@ -9,5 +9,6 @@
 	<script type="text/javascript src=js/bootstrap.min.js"></script>
 </head>
 <body>
+	<nav class="navbar navbar-default navbar-fixed-top"></nav>
 </body>
 </html>
