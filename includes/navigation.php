@@ -1,3 +1,9 @@
+<?php 
+
+$sql = "SELECT * FROM categories WHERE parent = 0";
+
+?>
+
 <nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<a href="index.php" class="navbar-brand">Shaunta's Boutique</a>
