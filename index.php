@@ -14,6 +14,7 @@
 <?php 
 
 $sql = "SELECT * FROM products WHERE featured = 1";
+$featured = mysqli_query($db, $sql);
 
 ?>
 
