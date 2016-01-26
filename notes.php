@@ -9,4 +9,7 @@
 // category is nested inside another one. parent will have a default of 0, assumption is each category will be a top level
 // category
 
+
+// Added Men, Women, Girls, Boys in our categories table. These will be our top level menu items
+
 ?>
