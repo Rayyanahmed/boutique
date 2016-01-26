@@ -1,3 +1,5 @@
+<?php require_once('core/init.php'); ?>
+
 <?php include('includes/head.php'); ?>
 	<!-- Top Nav Bar -->
 <?php include('includes/navigation.php'); ?>
