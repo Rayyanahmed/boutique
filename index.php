@@ -23,7 +23,7 @@ $featured = mysqli_query($db, $sql);
 		<div class="col-md-8">
 			<div class="row">
 				<h2 class="text-center">Featured Products</h2>
-
+				<?php while($row = mysqli_fetch_assoc($featured)) : ?>
 				<div class="col-md-3">
 					<h4>Levis Jeans</h4>
 					<img src="images/products/men4.png" alt="Levis Jeans" class="img-thumb"/>
@@ -32,7 +32,7 @@ $featured = mysqli_query($db, $sql);
 					<p class="price">Our Price: 19.99</p>
 					<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-1">Details</button>
 				</div>
-
+			<?php endwhile; ?>
 			</div>
 		</div>
 
