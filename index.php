@@ -51,9 +51,75 @@
 					<!-- All these classes so we can target later -->
 					<p class="list-price text-danger">List Price <s>$54.99</s></p>
 					<p class="price">Our Price: 19.99</p>
+					<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-1">Details</button>
+				</div>
+
+				<div class="col-md-3">
+					<h4>Levis Jeans</h4>
+					<img src="images/products/men4.png" alt="Levis Jeans" />
+					<!-- All these classes so we can target later -->
+					<p class="list-price text-danger">List Price <s>$54.99</s></p>
+					<p class="price">Our Price: 19.99</p>
+					<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-1">Details</button>
+				</div>
+
+				<div class="col-md-3">
+					<h4>Levis Jeans</h4>
+					<img src="images/products/men4.png" alt="Levis Jeans" />
+					<!-- All these classes so we can target later -->
+					<p class="list-price text-danger">List Price <s>$54.99</s></p>
+					<p class="price">Our Price: 19.99</p>
+					<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-1">Details</button>
+				</div>
+
+				<div class="col-md-3">
+					<h4>Levis Jeans</h4>
+					<img src="images/products/men4.png" alt="Levis Jeans" />
+					<!-- All these classes so we can target later -->
+					<p class="list-price text-danger">List Price <s>$54.99</s></p>
+					<p class="price">Our Price: 19.99</p>
+					<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-1">Details</button>
+				</div>
+
+				<div class="col-md-3">
+					<h4>Levis Jeans</h4>
+					<img src="images/products/men4.png" alt="Levis Jeans" />
+					<!-- All these classes so we can target later -->
+					<p class="list-price text-danger">List Price <s>$54.99</s></p>
+					<p class="price">Our Price: 19.99</p>
+					<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-1">Details</button>
+				</div>
+
+				<div class="col-md-3">
+					<h4>Levis Jeans</h4>
+					<img src="images/products/men4.png" alt="Levis Jeans" />
+					<!-- All these classes so we can target later -->
+					<p class="list-price text-danger">List Price <s>$54.99</s></p>
+					<p class="price">Our Price: 19.99</p>
+					<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-1">Details</button>
+				</div>
+
+				<div class="col-md-3">
+					<h4>Levis Jeans</h4>
+					<img src="images/products/men4.png" alt="Levis Jeans" />
+					<!-- All these classes so we can target later -->
+					<p class="list-price text-danger">List Price <s>$54.99</s></p>
+					<p class="price">Our Price: 19.99</p>
+					<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-1">Details</button>
+				</div>
+
+				<div class="col-md-3">
+					<h4>Levis Jeans</h4>
+					<img src="images/products/men4.png" alt="Levis Jeans" />
+					<!-- All these classes so we can target later -->
+					<p class="list-price text-danger">List Price <s>$54.99</s></p>
+					<p class="price">Our Price: 19.99</p>
+					<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-1">Details</button>
 				</div>
 			</div>
 		</div>
+
+
 		<!-- right sidebar -->
 		<div class="col-md-2"></div>
 	</div>
