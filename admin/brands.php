@@ -6,11 +6,21 @@ $sql = "SELECT * FROM brand ORDER BY brand";
 $results = mysqli_query($db, $sql);
 $errors = array();
 
+// Edit Brand
+if(isset($_GET['edit']) && !empty($_GET['edit'])) {
+	$edit_id = (int)$_GET['edit'];
+	$edit_id = sanitize($edit_id);
+	$sql2 = "SELECT * FROM brand WHERE id = '$edit_id'";
+	$edit_result = mysqli_query($db, $sql2);
+	$eBrand = mysqli_fetch_assoc($edit_result);
+	
+
+}
+
 // Delete brand
 if(isset($_GET['delete']) && !empty($_GET['delete'])) {
 	$delete_id = (int)($_GET['delete']);
 	$delete_id = sanitize($delete_id);
-	echo $delete_id;
 	// should write an sql query to see if the brand exists first in order to delete
 	$sql = "DELETE FROM brand WHERE id = '$delete_id'";
 	mysqli_query($db, $sql);
