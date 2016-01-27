@@ -4,6 +4,12 @@ include('includes/head.php');
 include('includes/navigation.php');
 ?>
 
+<?php 
+$sql = "SELECT * FROM categories";
+$result = mysqli_query($db, $sql);
+
+?>
+
 <h2 class="text-center">Categories</h2>
 
 <div class="row">
