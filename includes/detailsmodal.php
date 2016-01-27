@@ -9,6 +9,8 @@ $sql = "SELECT * FROM products WHERE id = '" . $id . "' ";
 $result = mysqli_query($db, $sql);
 // Going to take the result of our query and turn that into an associative array
 $product = mysqli_fetch_assoc($result);
+// We are going to have to make another query in order to fetch the brand, this is because a product has a key
+// that is associated with its brand
 
 ?>
 <div class="modal fade details-1" id="details-modal" tabindex="-1" role="dialog" aria-label="details-1" aria-hidden="true">
@@ -29,13 +31,12 @@ $product = mysqli_fetch_assoc($result);
 							<div class="col-sm-6">
 								<!-- to wrap image around -->
 								<div class="center-block">
-									<img src="images/products/men4.png" alt="Levis Jeans" class="details img-responsive">
+									<img src="<?php echo $product['image']; ?>" alt="Levis Jeans" class="details img-responsive">
 								</div>
 							</div>
 							<div class="col-sm-6">
 								<h4>Details</h4>
-								<p>These jeans are amazing, they are straight-leg, fit great
-									and look sexy. Get a pair while they last.</p>
+								<p><?php echo $product['description']; ?></p>
 								<hr>
 								<p>Price: $34.99</p>
 								<p>Brand: Levis</p>
