@@ -15,7 +15,7 @@ $results = mysqli_query($db, $sql);
 		<tr>
 		<?php while($row = mysqli_fetch_assoc($results)) : ?>
 			<td><a href="brands.php?edit=<?php echo $row['id']; ?>" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-pencil"></span></a></td>
-			<td>Levis</td>
+			<td><?php echo $row['brand']; ?></td>
 			<td><a href="brands.php?delete=<?php echo $row['id']; ?>" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-remove"></span></a></td>
 		<?php endwhile; ?>
 		</tr>
