@@ -18,7 +18,8 @@ $result = mysqli_query($db, $sql);
 	<div class="col-md-6">
 		<form class="form" action="categories.php" method="post">
 			<div class="form-group">
-				<label for="parent"></label>
+				<label for="parent">Parent</label>
+				<select class="form-control" name="parent" id="parent"></select>
 			</div>
 		</form>
 	</div>
