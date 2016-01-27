@@ -57,7 +57,5 @@
 			</div>
 		</div>
 	</div>
-	<!-- What this ob_start() function does is that it starts a buffer and reads all the data
-	on this page. Then it sends it back to the ajax request as a data object. Then the ob_get_clean() method cleans up the 
-	buffer ->
-<?php ob_get_clean(); ?>
+	<!-- Still not dynamic, we are exactly where we left off --> 
+<?php echo ob_get_clean(); ?>

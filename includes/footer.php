@@ -30,7 +30,7 @@
 		function detailsModal(id) {
 			var data = {"id" : id, };
 			jQuery.ajax({
-				url : <?php echo BASEURL; ?> + 'css/detailsmodal.php',
+				url : <?php echo BASEURL; ?> + 'includes/detailsmodal.php',
 				method : "post",
 				data : data,
 				success: function(data) {
