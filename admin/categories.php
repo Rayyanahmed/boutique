@@ -5,7 +5,7 @@ include('includes/navigation.php');
 ?>
 
 <?php 
-$sql = "SELECT * FROM categories";
+$sql = "SELECT * FROM categories WHERE parent_id = 0";
 $result = mysqli_query($db, $sql);
 
 ?>
@@ -20,14 +20,16 @@ $result = mysqli_query($db, $sql);
 				<th>Category</th><th>Parent</th><th></th>
 			</head>
 			<tbody>
+				<?php while($parent = mysqli_fetch_assoc($result)) : ?>
 				<tr>
 					<td>Shirts</td>
 					<td>Men</td>
 					<td>
-						<a href="categories.php?edit=1" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-pencil"></span></a>
-						<a href="categories.php?delete=1" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-remove"></span></a>
+						<a href="categories.php?edit=<?php echo $parent['id']; ?>" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-pencil"></span></a>
+						<a href="categories.php?delete=<?php echo $parent['id']; ?>" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-remove"></span></a>
 					</td>
 				</tr>
+				<?php endwhile; ?>
 			</tbody>
 		</table>
 	</div>
