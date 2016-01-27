@@ -49,7 +49,7 @@ if(isset($_POST['add_submit'])) {
 </div>
 
 
-<table class="table table-bordered table-striped table-auto">
+<table class="table table-bordered table-striped table-auto table-condensed">
 	<head>
 		<th></th><th>Brand</th><th></th>
 	</head>
