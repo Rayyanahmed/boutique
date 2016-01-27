@@ -10,13 +10,18 @@ $errors = array();
 if(isset($_POST['add_submit'])) {
 	// check if brand is blank
 	if(empty($_POST['brand'])) {
-		errors[] = 'You must enter a brand';
+		$errors[] = 'You must enter a brand';
 	}
 }
+
 
  ?>
 <h2 class="text-center">Brands</h2>
 <!-- Brand Form -->
+<!-- the code reruns everytime there is some sort of request which is why the error array is empty -->
+<?php if(!empty($errors)) {
+	echo display_errors($errors);
+} ?>
 
 <div>
 	<div class="text-center">
