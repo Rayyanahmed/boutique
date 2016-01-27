@@ -82,12 +82,11 @@ $size_array = explode(',', $size_string);
 		</div>
 	</div>
 	<script>
-	// To take out the modal code from our body
+	
 		function close_modal() {
-			jQuery('#details-modal').modal('hide'); // Closes the model
+			jQuery('#details-modal').modal('hide'); 
 			setTimeout(function() {
-				// this jquery object will be totally removed
-				// FINALLY FIGURED OUT WHY THE MODALS WERENT REFRESHING BECAUSE WE DIDNT REMOVE IT
+				
 				jQuery('#details-modal').remove();
 			},500);
 		}
