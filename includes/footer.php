@@ -30,7 +30,7 @@
 		function detailsModal(id) {
 			var data = {"id" : id, };
 			jQuery.ajax({
-				url : <?php echo BASEURL; ?> + 'includes/detailsmodal.php',
+				url : '/boutique/includes/detailsmodal.php',
 				method : "post",
 				// If you inspect the network for form you'll see there is form data
 				// That contains our id
