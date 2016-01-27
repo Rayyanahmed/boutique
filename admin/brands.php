@@ -1,6 +1,11 @@
 <?php require_once('../core/init.php'); ?>
 <?php require_once('includes/head.php'); ?>
 <?php require_once('includes/navigation.php'); ?>
+<?php // Get brands from database
+$sql = "SELECT * FROM brand ORDER BY brand";
+$results = mysqli_query($db, $sql);
+
+ ?>
 <h2 class="text-center">Brands</h2>
 <table class="table table-bordered table-striped table-auto">
 	<head>
