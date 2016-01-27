@@ -35,12 +35,9 @@
 				method : "post",
 				data : data,
 				success: function(data) {
-					// on success the modal should come back
-					// We are going to append the entire modal form at the end
-					// of our body
 					jQuery('body').append(data);
-					// Now we have to select our modal and open it
-					// We can find the modal by id. I'll probably rename modal here
+					// Select modal, use bootstrap jquery function toggle
+					jQuery('#details-modal').modal('toggle');
 				},
 				error: function() {
 					alert("Something went wrong!");
