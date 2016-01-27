@@ -1,6 +1,4 @@
 <?php require_once('../core/init.php'); ?>
-<?php ob_start(); ?>
-
 <?php 
 $id = $_POST['id'];
 $id = (int)$id;
@@ -16,8 +14,14 @@ $brand = $brand_array['brand'];
 // If we want to dynamically add sizes we can loop through the array if the key doesn't exist then add the key
 // and set the value equal to one
 $size_string = $product['sizes'];
+// Everytime it sees a comma it will make a new array
+$size_array = explode(',', $size_string);
+
 
 ?>
+
+<?php ob_start(); ?>
+
 <div class="modal fade details-1" id="details-modal" tabindex="-1" role="dialog" aria-label="details-1" aria-hidden="true">
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
@@ -57,10 +61,12 @@ $size_string = $product['sizes'];
 									<div class="form-group">
 										<label for="size"></label>
 										<select name="size" id="size" class="form-control">Size
-											<option value=""></option>
-											<option value="28">28</option>
-											<option value="32">32</option>
-											<option value="36">36</option>
+											<?php foreach($size_array as $string) { 
+												$string_array = explode(':', $string);
+												$size = $string_array[0];
+												$quantity = $string_array[1];
+												echo "<option value='" . $size . "'>'" . $size . "' (Available: '" . $quantity . " ')</option>";
+											 } ?>
 										</select>
 									</div>
 								</form>
