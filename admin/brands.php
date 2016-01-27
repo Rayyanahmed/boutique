@@ -13,7 +13,7 @@ if(isset($_POST['add_submit'])) {
 		$errors[] = 'You must enter a brand';
 	}
 	// Check if brand exists in database
-	$brand = $_POST['brand'];
+	$brand = sanitize($_POST['brand']);
 	$sql = "SELECT * FROM brand WHERE brand = '$brand'";
 	$result = mysqli_query($db, $sql);
 	$count = mysqli_num_rows($result);
