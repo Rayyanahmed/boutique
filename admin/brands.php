@@ -17,7 +17,7 @@ $results = mysqli_query($db, $sql);
 				<input type="text" name="brand" id="brand" class="form-control" value="<?php if(isset($_POST['brand'])) { echo $_POST['brand']; } ?>">
 				<input type="submit" name="add_submit" value="Add Brand" class="btn btn-md btn-success">
 			</div>
-		</form>
+		</form><hr>
 	</div>
 </div>
 
