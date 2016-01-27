@@ -5,6 +5,15 @@
 $sql = "SELECT * FROM brand ORDER BY brand";
 $results = mysqli_query($db, $sql);
 $errors = array();
+
+// Delete brand
+if(isset($_GET['delete']) && !empty($_GET['delete'])) {
+	$delete_id = (int)($_GET['delete']);
+	$delete_id = sanitize($delete_id);
+	echo $delete_id;
+
+}
+
 // If add form is submitted
 
 if(isset($_POST['add_submit'])) {
@@ -30,7 +39,6 @@ if(isset($_POST['add_submit'])) {
 		header('Location: brands.php');
 	}
 }
-// LEARN ABOUT CSRF attacks!
 
  ?>
 <h2 class="text-center">Brands</h2>
