@@ -65,7 +65,7 @@ $size_array = explode(',', $size_string);
 												$string_array = explode(':', $string);
 												$size = $string_array[0];
 												$quantity = $string_array[1];
-												echo "<option value='" . $size . "'>'" . $size . "' (Available: '" . $quantity . " ')</option>";
+												echo "<option value=" . $size . ">" . $size . " (Available: " . $quantity . ")</option>";
 											 } ?>
 										</select>
 									</div>
