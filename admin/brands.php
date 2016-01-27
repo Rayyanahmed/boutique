@@ -8,7 +8,10 @@ $errors = array();
 // If add form is submitted
 
 if(isset($_POST['add_submit'])) {
-
+	// check if brand is blank
+	if(empty($_POST['brand'])) {
+		errors[] = 'You must enter a brand';
+	}
 }
 
  ?>
