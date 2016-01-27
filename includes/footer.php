@@ -30,12 +30,17 @@
 		function detailsModal(id) {
 			var data = {"id" : id, };
 			jQuery.ajax({
-				url : <?php echo BASEURL; ?> + 'includes/detailsmodal.php',
+				// Seems like whatever url we put it wraps the entire content in an object and then returns it to us
+				// and we can grab it with a success function and pass it into a parameter and then do whatever we want with it
+				url : <?php echo BASEURL; ?> + 'css/detailsmodal.php',
 				// Will send this data to the baseurl
 				method : "post",
 				data : data,
 				success: function(data) {
+
+					console.log(data);
 					jQuery('body').append(data);
+
 					jQuery('#details-modal').modal('toggle');
 				},
 				error: function() {
