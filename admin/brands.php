@@ -64,7 +64,7 @@ if(isset($_POST['add_submit'])) {
 			<div class="form-group">
 				<label for="brand"><?php echo ((isset($_GET['edit'])) ? 'Edit' : 'Add a'); ?> Brand</label>
 				<input type="text" name="brand" id="brand" class="form-control" value="<?php if(isset($_POST['brand'])) { echo $_POST['brand']; } ?>">
-				<input type="submit" name="add_submit" value="Add Brand" class="btn btn-md btn-success">
+				<input type="submit" name="add_submit" value="<?php echo ((isset($_GET['edit'])) ? 'Edit' : 'Add a'); ?> Brand" class="btn btn-md btn-success">
 			</div>
 		</form><hr>
 	</div>
