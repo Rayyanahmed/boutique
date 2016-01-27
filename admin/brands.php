@@ -13,7 +13,7 @@ if(isset($_GET['edit']) && !empty($_GET['edit'])) {
 	$sql2 = "SELECT * FROM brand WHERE id = '$edit_id'";
 	$edit_result = mysqli_query($db, $sql2);
 	$eBrand = mysqli_fetch_assoc($edit_result);
-	
+
 
 }
 
@@ -62,7 +62,7 @@ if(isset($_POST['add_submit'])) {
 	<div class="text-center">
 		<form class="form-inline" action="brands.php" method="post">
 			<div class="form-group">
-				<label for="brand">Add A Brand</label>
+				<label for="brand"><?php echo ((isset($_GET['edit'])) ? 'Edit' : 'Add a'); ?> Brand</label>
 				<input type="text" name="brand" id="brand" class="form-control" value="<?php if(isset($_POST['brand'])) { echo $_POST['brand']; } ?>">
 				<input type="submit" name="add_submit" value="Add Brand" class="btn btn-md btn-success">
 			</div>
