@@ -9,7 +9,7 @@ Brands
 	<tbody>
 		<tr>
 			<!-- The id will obviously be dynamic later on -->
-			<td><a href="brands.php?edit=1"><span class="glyphicon glyphicon-pencil"></span></a></td>
+			<td><a href="brands.php?edit=1" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-pencil"></span></a></td>
 			<td>Levis</td>
 			<td></td>
 		</tr>
