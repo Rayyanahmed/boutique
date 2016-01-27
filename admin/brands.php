@@ -12,13 +12,13 @@ $results = mysqli_query($db, $sql);
 		<th></th><th>Brand</th><th></th>
 	</head>
 	<tbody>
-		<tr>
 		<?php while($row = mysqli_fetch_assoc($results)) : ?>
+		<tr>
 			<td><a href="brands.php?edit=<?php echo $row['id']; ?>" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-pencil"></span></a></td>
 			<td><?php echo $row['brand']; ?></td>
 			<td><a href="brands.php?delete=<?php echo $row['id']; ?>" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-remove"></span></a></td>
-		<?php endwhile; ?>
 		</tr>
+		<?php endwhile; ?>
 	</tbody>
 </table>
 <?php require_once('includes/footer.php'); ?>
