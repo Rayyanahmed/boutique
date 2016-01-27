@@ -13,7 +13,17 @@ $result = mysqli_query($db, $sql);
 <h2 class="text-center">Categories</h2>
 
 <div class="row">
-	<div class="col-md-6"></div>
+
+	<!-- Form -->
+	<div class="col-md-6">
+		<form class="form" action="categories.php" method="post">
+			<div class="form-group">
+				<label for="parent"></label>
+			</div>
+		</form>
+	</div>
+
+	<!-- Category Table -->
 	<div class="col-md-6">
 		<table class="table table-border">
 			<head>
