@@ -57,7 +57,7 @@ if(isset($_POST['add_submit'])) {
  ?>
 <h2 class="text-center">Brands</h2>
 <!-- Brand Form -->
-
+<!-- I want to turn this into a modal -->
 <div>
 	<div class="text-center">
 		<form class="form-inline" action="brands.php" method="post">
