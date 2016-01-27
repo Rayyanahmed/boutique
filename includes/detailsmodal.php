@@ -1,3 +1,4 @@
+<?php ob_start(); ?>
 <div class="modal fade details-1" id="details-modal" tabindex="-1" role="dialog" aria-label="details-1" aria-hidden="true">
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
@@ -56,3 +57,7 @@
 			</div>
 		</div>
 	</div>
+	<!-- What this ob_start() function does is that it starts a buffer and reads all the data
+	on this page. Then it sends it back to the ajax request as a data object. Then the ob_get_clean() method cleans up the 
+	buffer ->
+<?php ob_get_clean(); ?>
