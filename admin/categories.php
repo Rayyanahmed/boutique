@@ -6,6 +6,11 @@ include('includes/navigation.php');
 
 <h2 class="text-center">Categories</h2>
 
+<div class="row">
+	<div class="col-md-6">Test</div>
+	<div class="col-md-6">Test</div>
+</div>
+
 <?php 
 include('includes/footer.php');
 ?>
