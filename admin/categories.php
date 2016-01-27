@@ -17,7 +17,7 @@ $result = mysqli_query($db, $sql);
 	<div class="col-md-6">
 		<table class="table table-border">
 			<head>
-				<th>Category</th><th>Level</th><th></th>
+				<th>Category</th><th></th><th></th>
 			</head>
 			<tbody>
 				<?php while($parent = mysqli_fetch_assoc($result)) : 
@@ -34,9 +34,9 @@ $result = mysqli_query($db, $sql);
 					</td>
 				</tr>
 				<?php while($child = mysqli_fetch_assoc($cresult)) : ?>
-					<tr class="bg-secondary">
+					<tr class="bg-info">
 					<td><?php echo $child['category']; ?></td>
-					<td>Child</td>
+					<td><?php echo $parent['category']; ?></td>
 					<td>
 						<a href="categories.php?edit=<?php echo $child['id']; ?>" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-pencil"></span></a>
 						<a href="categories.php?delete=<?php echo $child['id']; ?>" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-remove"></span></a>
