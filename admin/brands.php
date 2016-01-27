@@ -12,16 +12,29 @@ if(isset($_POST['add_submit'])) {
 	if(empty($_POST['brand'])) {
 		$errors[] = 'You must enter a brand';
 	}
+	// Check if brand exists in database
+	$brand = $_POST['brand'];
+	$sql = "SELECT * FROM brand WHERE brand = '$brand'";
+	$result = mysqli_query($db, $sql);
+	$count = mysqli_num_rows($result);
+	if($count > 0) {
+		$errors[] = $brand . ' already exists!';
+	}
+	// display errors
+	if(!empty($errors)) {
+		echo display_errors($errors);
+	} else {
+		// Add brand to database
+		$sql = "INSERT INTO brand (brand) VALUES ('$brand')";
+		mysqli_query($db, $sql);
+		header('Location: brands.php');
+	}
 }
 
 
  ?>
 <h2 class="text-center">Brands</h2>
 <!-- Brand Form -->
-<!-- the code reruns everytime there is some sort of request which is why the error array is empty -->
-<?php if(!empty($errors)) {
-	echo display_errors($errors);
-} ?>
 
 <div>
 	<div class="text-center">
