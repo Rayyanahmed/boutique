@@ -7,6 +7,18 @@ $results = mysqli_query($db, $sql);
 
  ?>
 <h2 class="text-center">Brands</h2>
+<!-- Brand Form -->
+
+<div>
+	<form class="form-inline" action="brands.php" method="post">
+		<div class="form-group">
+			<label for="brand">Add A Brand</label>
+			<input type="text" name="brand" id="brand" class="form-control" value="<?php if(isset($_POST['brand'])) { echo $_POST['brand']; } ?>">
+		</div>
+	</form>
+</div>
+
+
 <table class="table table-bordered table-striped table-auto">
 	<head>
 		<th></th><th>Brand</th><th></th>
