@@ -66,3 +66,7 @@ img.details {
 	margin: 15px auto;
 	/* centers the image on the modal */
 }
+
+.table-auto {
+	width: auto;
+}

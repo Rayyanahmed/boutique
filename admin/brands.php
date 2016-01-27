@@ -2,7 +2,7 @@
 <?php require_once('includes/head.php'); ?>
 <?php require_once('includes/navigation.php'); ?>
 Brands
-<table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped table-auto">
 	<head>
 		<th></th><th>Brand</th><th></th>
 	</head>
