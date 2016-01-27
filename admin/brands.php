@@ -1,7 +1,7 @@
 <?php require_once('../core/init.php'); ?>
 <?php require_once('includes/head.php'); ?>
 <?php require_once('includes/navigation.php'); ?>
-Brands
+<h2 class="text-center">Brands</h2>
 <table class="table table-bordered table-striped table-auto">
 	<head>
 		<th></th><th>Brand</th><th></th>
