@@ -39,6 +39,8 @@
 					// We are going to append the entire modal form at the end
 					// of our body
 					jQuery('body').append(data);
+					// Now we have to select our modal and open it
+					// We can find the modal by id. I'll probably rename modal here
 				},
 				error: function() {
 					alert("Something went wrong!");
