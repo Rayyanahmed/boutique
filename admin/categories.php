@@ -22,8 +22,7 @@ $result = mysqli_query($db, $sql);
 			<tbody>
 				<?php while($parent = mysqli_fetch_assoc($result)) : ?>
 				<tr>
-					<td>Shirts</td>
-					<td>Men</td>
+					<td><?php echo $parent['category']; ?></td>
 					<td>
 						<a href="categories.php?edit=<?php echo $parent['id']; ?>" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-pencil"></span></a>
 						<a href="categories.php?delete=<?php echo $parent['id']; ?>" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-remove"></span></a>
