@@ -29,13 +29,20 @@
 
 		function detailsModal(id) {
 			var data = {"id" : id, };
-			$(this).ajax({
+			jQuery.ajax({
 				url : <?php echo BASEURL; ?> + 'includes/detailmodal.php',
 				// Will send this data to the baseurl
 				method : "post",
 				data : data,
-				success: function() {},
-				error: function() {}
+				success: function(data) {
+					// on success the modal should come back
+					// We are going to append the entire modal form at the end
+					// of our body
+					jQuery('body').append(data);
+				},
+				error: function() {
+					alert("Something went wrong!");
+				}
 			});
 		}
 
