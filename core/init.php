@@ -7,6 +7,8 @@ if(mysqli_connect_errno($db)) {
 	die();
 }
 
+// We defined the config file as a relative file instead of an absolute file, which is fine for
+// being required in the admin folder but breaks our main site
 require_once('../config.php');
 require_once(BASEURL . 'helpers/helpers.php');
 
