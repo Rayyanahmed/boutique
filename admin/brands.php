@@ -4,6 +4,12 @@
 <?php // Get brands from database
 $sql = "SELECT * FROM brand ORDER BY brand";
 $results = mysqli_query($db, $sql);
+$errors = array();
+// If add form is submitted
+
+if(isset($_POST['add_submit'])) {
+
+}
 
  ?>
 <h2 class="text-center">Brands</h2>
