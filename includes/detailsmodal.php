@@ -26,7 +26,7 @@ $size_array = explode(',', $size_string);
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
-					<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+					<button class="close" type="button" onclick="close_modal();" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 					<!-- all going to be dynamic later -->
@@ -75,11 +75,22 @@ $size_array = explode(',', $size_string);
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button class="btn btn-default" data-dismiss="modal">Close</button>
+					<button class="btn btn-default" onclick="close_modal();">Close</button>
 					<button class="btn btn-warning" type="submit" class="glyphicon glyphicon-shopping-cart"><span>Add to Cart</span></button>
 				</div>
 			</div>
 		</div>
 	</div>
+	<script>
+	// To take out the modal code from our body
+		function close_modal() {
+			jQuery('#details-modal').modal('hide'); // Closes the model
+			setTimeout(function() {
+				// this jquery object will be totally removed
+				// FINALLY FIGURED OUT WHY THE MODALS WERENT REFRESHING BECAUSE WE DIDNT REMOVE IT
+				jQuery('#details-modal').remove();
+			},500);
+		}
+	</script>
 	<!-- Still not dynamic, we are exactly where we left off --> 
 <?php echo ob_get_clean(); ?>
