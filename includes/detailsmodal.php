@@ -1,4 +1,16 @@
+<?php require_once('../core/init.php'); ?>
 <?php ob_start(); ?>
+
+<?php 
+$id = $_POST['id'];
+// Make sure its an integer
+$id = (int)$id;
+$sql = "SELECT * FROM products WHERE id = '" . $id . "' ";
+$result = mysqli_query($db, $sql);
+// Going to take the result of our query and turn that into an associative array
+$product = mysqli_fetch_assoc($result);
+
+?>
 <div class="modal fade details-1" id="details-modal" tabindex="-1" role="dialog" aria-label="details-1" aria-hidden="true">
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
