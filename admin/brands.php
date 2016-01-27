@@ -11,7 +11,7 @@ Brands
 			<!-- The id will obviously be dynamic later on -->
 			<td><a href="brands.php?edit=1" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-pencil"></span></a></td>
 			<td>Levis</td>
-			<td></td>
+			<td><a href="brands.php?delete=1" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-remove"></span></a></td>
 		</tr>
 	</tbody>
 </table>
