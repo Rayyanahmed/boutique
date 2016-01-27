@@ -11,6 +11,10 @@ if(isset($_GET['delete']) && !empty($_GET['delete'])) {
 	$delete_id = (int)($_GET['delete']);
 	$delete_id = sanitize($delete_id);
 	echo $delete_id;
+	// should write an sql query to see if the brand exists first in order to delete
+	$sql = "DELETE FROM brand WHERE id = '$delete_id'";
+	mysqli_query($db, $sql);
+	header('Location: brands.php');
 
 }
 
