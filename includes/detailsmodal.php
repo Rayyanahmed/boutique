@@ -3,14 +3,15 @@
 
 <?php 
 $id = $_POST['id'];
-// Make sure its an integer
 $id = (int)$id;
 $sql = "SELECT * FROM products WHERE id = '" . $id . "' ";
 $result = mysqli_query($db, $sql);
-// Going to take the result of our query and turn that into an associative array
 $product = mysqli_fetch_assoc($result);
-// We are going to have to make another query in order to fetch the brand, this is because a product has a key
-// that is associated with its brand
+$brand_id = $product['brand_id'];
+$sql = "SELECT brand FROM brand WHERE id = '" . $brand_id . "'";
+$brand_query = mysqli_query($db, $sql);
+$brand_array = mysqli_fetch_assoc($brand_query);
+$brand = $brand_array['brand'];
 
 ?>
 <div class="modal fade details-1" id="details-modal" tabindex="-1" role="dialog" aria-label="details-1" aria-hidden="true">
@@ -39,7 +40,7 @@ $product = mysqli_fetch_assoc($result);
 								<p><?php echo $product['description']; ?></p>
 								<hr>
 								<p>Price: $34.99</p>
-								<p>Brand: Levis</p>
+								<p>Brand: <?php echo $brand; ?></p>
 								<form action="add_cart.php" method="post">
 									<div class="form-group">
 										<!-- Allows us to control width of input -->
