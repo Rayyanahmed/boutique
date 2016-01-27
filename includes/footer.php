@@ -30,13 +30,12 @@
 		function detailsModal(id) {
 			var data = {"id" : id, };
 			jQuery.ajax({
-				url : <?php echo BASEURL; ?> + 'includes/detailmodal.php',
+				url : <?php echo BASEURL; ?> + 'includes/detailsmodal.php',
 				// Will send this data to the baseurl
 				method : "post",
 				data : data,
 				success: function(data) {
 					jQuery('body').append(data);
-					// Select modal, use bootstrap jquery function toggle
 					jQuery('#details-modal').modal('toggle');
 				},
 				error: function() {
