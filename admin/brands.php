@@ -30,7 +30,7 @@ if(isset($_POST['add_submit'])) {
 		header('Location: brands.php');
 	}
 }
-
+// LEARN ABOUT CSRF attacks!
 
  ?>
 <h2 class="text-center">Brands</h2>
