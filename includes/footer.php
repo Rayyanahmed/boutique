@@ -32,6 +32,8 @@
 			jQuery.ajax({
 				url : <?php echo BASEURL; ?> + 'includes/detailsmodal.php',
 				method : "post",
+				// If you inspect the network for form you'll see there is form data
+				// That contains our id
 				data : data,
 				success: function(data) {
 
