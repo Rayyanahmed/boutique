@@ -19,7 +19,7 @@ $product = mysqli_fetch_assoc($result);
 						<span aria-hidden="true">&times;</span>
 					</button>
 					<!-- all going to be dynamic later -->
-					<h4 class="modal-title" class="text-center">Levis Jeans</h4>
+					<h4 class="modal-title" class="text-center"><?php echo $product['title']; ?></h4>
 				</div>
 				<div class="modal-body">
 					<!-- we are going to put container fluid inside the modal body so we can
