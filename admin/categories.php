@@ -19,7 +19,12 @@ $result = mysqli_query($db, $sql);
 		<form class="form" action="categories.php" method="post">
 			<div class="form-group">
 				<label for="parent">Parent</label>
-				<select class="form-control" name="parent" id="parent"></select>
+				<select class="form-control" name="parent" id="parent">
+					<option value="0"></option>
+					<?php while($parent = mysqli_fetch_assoc($result)) : ?>
+						<option value="<?php echo $parent['id'] ?>"><?php echo $parent['category']; ?></option>
+					<?php endwhile; ?>
+				</select>
 			</div>
 		</form>
 	</div>
@@ -31,7 +36,10 @@ $result = mysqli_query($db, $sql);
 				<th>Category</th><th></th><th></th>
 			</head>
 			<tbody>
-				<?php while($parent = mysqli_fetch_assoc($result)) : 
+				<?php 
+					$sql = "SELECT * FROM categories WHERE parent_id = 0";
+					$result = mysqli_query($db, $sql);	
+					while($parent = mysqli_fetch_assoc($result)) : 
 					$parent_id = (int)$parent['id'];
 					$sql2 = "SELECT * FROM categories WHERE parent_id = '$parent_id'";
 					$cresult = mysqli_query($db, $sql2);
