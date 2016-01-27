@@ -12,6 +12,10 @@ $sql = "SELECT brand FROM brand WHERE id = '" . $brand_id . "'";
 $brand_query = mysqli_query($db, $sql);
 $brand_array = mysqli_fetch_assoc($brand_query);
 $brand = $brand_array['brand'];
+// Right now we have sizes stored in a string, what if we chose to do any associative array instead?
+// If we want to dynamically add sizes we can loop through the array if the key doesn't exist then add the key
+// and set the value equal to one
+$size_string = $product['sizes'];
 
 ?>
 <div class="modal fade details-1" id="details-modal" tabindex="-1" role="dialog" aria-label="details-1" aria-hidden="true">
