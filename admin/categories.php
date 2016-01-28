@@ -37,6 +37,7 @@ if(isset($_GET['delete']) && !empty($_GET['delete'])) {
 $category = '';
 // Process form
 $errors = array();
+$parent = '';
 if(isset($_POST) && !empty($_POST)) {
 	$parent = sanitize($_POST['parent']);
 	$category = sanitize($_POST['category']);
@@ -71,12 +72,16 @@ if(isset($_POST) && !empty($_POST)) {
 // available. We access the category name and assign it to $category_value to
 // display on form
 $category_value = '';
+$parent_value = 0;
 if(isset($_GET['edit'])) {
 	$category_value = $edit_category['category'];
+	$parent_value = $edit_category['parent_id'];
 } else {
-	if(isset($_POST[''])) {
+	if(isset($_POST)) {
 		// Getting the post value
 		$category_value = $category;
+		// $parent is already set
+		$parent_value = $parent;
 	}
 }
 
