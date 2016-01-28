@@ -5,6 +5,7 @@ include('includes/navigation.php');
 ?>
 
 <?php 
+// changes
 $sql = "SELECT * FROM categories WHERE parent_id = 0";
 $result = mysqli_query($db, $sql);
 
