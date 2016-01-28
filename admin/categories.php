@@ -13,10 +13,12 @@ $errors = array();
 if(isset($_POST) && !empty($_POST)) {
 	$parent = sanitize($_POST['parent']);
 	$category = sanitize($_POST['category']);
+	$sqlform = "SELECT * FROM categories WHERE category = '$category' AND parent_id = '$parent'";
 	// If category is blank
 	if($category == '') {
 		$errors[] = 'The category cannot be left blank';
 	}
+	if()
 }
 
 ?>
