@@ -17,6 +17,7 @@ $result = mysqli_query($db, $sql);
 	<!-- Form -->
 	<div class="col-md-6">
 		<form class="form" action="categories.php" method="post">
+			<legend>Add A Category</legend>
 			<div class="form-group">
 				<label for="parent">Parent</label>
 				<select class="form-control" name="parent" id="parent">
