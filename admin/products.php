@@ -12,6 +12,12 @@ if (isset($_GET['add'])) {
 			<label for="title">Title*</label>
 			<input type="text" name="title" id="title" value="<?php echo((isset($_POST['title']))?sanitize($_POST['title']) :'') ?>">
 		</div>
+		<div class="form-group col-md-3">
+			<label for="brand">Brand*</label>
+			<select class="form-control" id="brand" name="brand">
+				<option value=""></option>
+			</select>
+		</div>
 	</form>
 <?php } else {
 
