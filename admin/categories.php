@@ -9,6 +9,16 @@ include('includes/navigation.php');
 $sql = "SELECT * FROM categories WHERE parent_id = 0";
 $result = mysqli_query($db, $sql);
 
+// Delete category 
+if(isset($_GET['delete']) && !empty($_GET['delete'])) {
+	$delete_id = (int)($_GET['delete']);
+	$delete_id = sanitize($delete_id);
+	$dsql = "DELETE FROM categories WHERE id = '$delete_id'";
+	mysqli_query($db, $dsql);
+	header("Location: categories.php");
+} 
+
+
 // Process form
 $errors = array();
 if(isset($_POST) && !empty($_POST)) {
