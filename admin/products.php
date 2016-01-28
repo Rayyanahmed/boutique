@@ -5,7 +5,10 @@ include('includes/navigation.php');
 ?>
 
 <h2 class="text-center">Products</h2><hr>
-<table class="table table-border table-condensed table-striped"></table>
+<table class="table table-border table-condensed table-striped">
+	<thead><th></th><th>Product</th><th>Price</th><th>Categories</th><th>Featured</th><th>Sold</th></thead>
+	<tbody></tbody>
+</table>
 
 
 <?php
