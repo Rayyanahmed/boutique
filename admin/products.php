@@ -11,6 +11,8 @@ if(isset($_GET['featured']) && !empty($_GET['featured'])) {
 	$id = (int)$_GET['id'];
 	$featured = (int)$_GET['featured'];
 	$featuredSql = "UPDATE products SET featured = '$featured' WHERE id = '$id'";
+	mysqli_query($db, $featuredSql);
+	header('Location: products.php');
 }
 ?>
 
