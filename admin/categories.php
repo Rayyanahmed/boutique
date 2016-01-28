@@ -72,7 +72,7 @@ if(isset($_POST) && !empty($_POST)) {
 
 	<!-- Form -->
 	<div class="col-md-6">
-		<form class="form" action="categories.php" method="post">
+		<form class="form" action="categories.php<?php (() ? : ) ?>" method="post">
 			<legend>Add A Category</legend>
 			<div id="errors"><?php echo display_errors($errors); ?></div>
 			<div class="form-group">
