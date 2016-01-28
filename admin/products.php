@@ -14,14 +14,14 @@ $presults = mysqli_query($db, $sql);
 		<?php while($product = mysqli_fetch_assoc($presults)): ?>
 			<tr>
 				<td>
-					<a href="" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-pencil"></span></a>
-					<a href="" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-remove"></span></a>
+					<a href="?edit=<?php echo $product['id']; ?>" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-pencil"></span></a>
+					<a href="?delete=<?php echo $product['id']; ?>" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-remove"></span></a>
 				</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
+				<td><?php echo $product['title']; ?></td>
+				<td><?php echo $product['price']; ?></td>
+				<td><?php echo $product['categories']; ?></td>
+				<td><?php echo $product['title']; ?></td>
+				<td><?php echo $product['title']; ?></td>
 			</tr>
 		<?php endwhile; ?>
 	</tbody>
