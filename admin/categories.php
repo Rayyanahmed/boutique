@@ -25,6 +25,13 @@ if(isset($_POST) && !empty($_POST)) {
 	if($count > 0) {
 		$errors[] = $category . ' already exists, please choose a new category';
 	}
+
+	// Display errors or update database
+	if(!empty($errors)) {
+		// display errors
+	} else {
+		// update database
+	}
 }
 
 ?>
