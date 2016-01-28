@@ -26,9 +26,9 @@ if (isset($_GET['add'])) {
 		<div class="form-group col-md-3">
 			<label for="parent">Parent Category:</label>
 			<select class="form-control" id="parent" name="parent">
-				<option value=""></option>
+				<option value="" <?php echo ((isset($_POST['parent']) && $_POST['parent'] == '')) ? ' selected':'' ?>></option>
 				<?php while($parent = mysqli_fetch_assoc($parentQuery)): ?>
-					<option value="<?php echo $parent['id']; ?>" <?php echo ((isset($_POST['parent']) && $_POST['parent'] == $parent['id']))?'select':'' ?> ><?php echo $parent['category']; ?></option>
+					<option value="<?php echo $parent['id']; ?>" <?php echo ((isset($_POST['parent']) && $_POST['parent'] == $parent['id']))?' select':'' ?> ><?php echo $parent['category']; ?></option>
 				<?php endwhile; ?>
 			</select>
 		</div>
