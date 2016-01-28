@@ -9,6 +9,16 @@ include('includes/navigation.php');
 $sql = "SELECT * FROM categories WHERE parent_id = 0";
 $result = mysqli_query($db, $sql);
 
+// Edit Category
+if(isset($_GET['edit']) && !empty($_GET['edit'])) {
+	$edit_id = (int)$_GET['edit'];
+	$edit_id = sanitize($edit_id);
+	$edit_sql = "SELECT * FROM categories WHERE id = '$edit_id'";
+	$edit_result = mysqli_query($db, $edit_result);
+	$category = mysqli_fetch_assoc($edit_result);
+}
+
+
 // Delete category 
 if(isset($_GET['delete']) && !empty($_GET['delete'])) {
 	$delete_id = (int)($_GET['delete']);
