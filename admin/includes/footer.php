@@ -14,7 +14,10 @@
 			url: '/boutique/admin/parsers/child_categories.php',
 			type: 'POST',
 			data: {parentID: parentID},
-			success: function() {},
+			// data comes back on success
+			success: function(data) {
+				
+			},
 			error: function() {alert("Something went wrong with the child options")},
 		});
 	}
