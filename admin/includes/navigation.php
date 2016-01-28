@@ -4,6 +4,7 @@
 			<ul class="nav navbar-nav">
 				<li><a href="brands.php">Brands</a></li>
 				<li><a href="categories.php">Categories</a></li>
+				<li><a href="products.php">Products</li>
 			</ul>
 		</div>
 	</nav>
