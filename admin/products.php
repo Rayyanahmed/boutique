@@ -13,7 +13,10 @@ $presults = mysqli_query($db, $sql);
 	<tbody>
 		<?php while($product = mysqli_fetch_assoc($presults)): ?>
 			<tr>
-				<td></td>
+				<td>
+					<a href="" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-pencil"></span></a>
+					<a href="" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-remove"></span></a>
+				</td>
 				<td></td>
 				<td></td>
 				<td></td>
