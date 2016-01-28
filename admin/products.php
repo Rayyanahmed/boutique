@@ -31,7 +31,7 @@ if(isset($_GET['featured'])) {
 				<td><?php echo $product['categories']; ?></td>
 				<td><a class="btn btn-xs btn-default" href="products.php?featured=<?php echo (($product['featured'] == 0)?'1':'0') ?>&id=<?php echo $product['id']; ?>"><span class="glyphicon glyphicon-<?php echo (($product['featured'] == 1)?'minus':'plus') ?>"></span>
 				</a>&nbsp <?php echo (($product['featured'] == 1)?'Featured Product':'') ?></td>
-				<td><?php echo $product['title']; ?></td>
+				<td>0</td>
 			</tr>
 		<?php endwhile; ?>
 	</tbody>
