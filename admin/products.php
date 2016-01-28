@@ -5,6 +5,8 @@ include('includes/navigation.php');
 // This is to archive our deleted products
 $sql = "SELECT * FROM products WHERE deleted = 0";
 $presults = mysqli_query($db, $sql);
+// We are now going to write logic that will update whether the product is featured or not
+// Kind of like an on off button
 ?>
 
 <h2 class="text-center">Products</h2><hr>
