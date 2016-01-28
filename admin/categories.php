@@ -34,6 +34,7 @@ if(isset($_POST) && !empty($_POST)) {
 	} else {
 		$updatesql = "INSERT INTO categories (category, parent_id) VALUES ('$category', '$parent')";
 		mysqli_query($db, $updatesql);
+		header("Location: categories.php");
 	}
 }
 
