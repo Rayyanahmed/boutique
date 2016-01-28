@@ -75,7 +75,8 @@ if(isset($_GET['edit'])) {
 	$category_value = $edit_category['category'];
 } else {
 	if(isset($_POST[''])) {
-
+		// Getting the post value
+		$category_value = $category;
 	}
 }
 
