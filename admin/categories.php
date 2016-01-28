@@ -20,11 +20,15 @@ $result = mysqli_query($db, $sql);
 			<div class="form-group">
 				<label for="parent">Parent</label>
 				<select class="form-control" name="parent" id="parent">
-					<option value="0"></option>
+					<option value="0">None</option>
 					<?php while($parent = mysqli_fetch_assoc($result)) : ?>
 						<option value="<?php echo $parent['id'] ?>"><?php echo $parent['category']; ?></option>
 					<?php endwhile; ?>
 				</select>
+			</div>
+			<div class="form-group">
+				<label for="category">Category</label>
+				<input type="text" class="form-control" id="category" name="category">
 			</div>
 		</form>
 	</div>
