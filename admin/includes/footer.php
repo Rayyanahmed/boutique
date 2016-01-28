@@ -16,7 +16,7 @@
 			data: {parentID: parentID},
 			// data comes back on success
 			success: function(data) {
-				
+				jQuery('#child').html(data);
 			},
 			error: function() {alert("Something went wrong with the child options")},
 		});
