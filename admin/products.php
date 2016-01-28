@@ -28,7 +28,7 @@ if (isset($_GET['add'])) {
 			<select class="form-control" id="parent" name="parent">
 				<option value=""></option>
 				<?php while($parent = mysqli_fetch_assoc($parentQuery)): ?>
-					<option value="<?php echo $parent['id']; ?>"></option>
+					<option value="<?php echo $parent['id']; ?>"><?php echo $parent['category']; ?></option>
 				<?php endwhile; ?>
 			</select>
 		</div>
