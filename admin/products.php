@@ -7,6 +7,11 @@ $sql = "SELECT * FROM products WHERE deleted = 0";
 $presults = mysqli_query($db, $sql);
 // We are now going to write logic that will update whether the product is featured or not
 // Kind of like an on off button
+if(isset($_GET['featured']) && !empty($_GET['featured'])) {
+	$id = (int)$_GET['id'];
+	$featured = (int)$_GET['featured'];
+	$featuredSql = "UPDATE products SET featured = '$featured' WHERE id = '$id'";
+}
 ?>
 
 <h2 class="text-center">Products</h2><hr>
