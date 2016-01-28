@@ -27,8 +27,10 @@ if(isset($_POST) && !empty($_POST)) {
 	}
 
 	// Display errors or update database
+
 	if(!empty($errors)) {
-		// display errors
+		$display = display_errors($errors); 
+
 	} else {
 		// update database
 	}
@@ -59,7 +61,7 @@ if(isset($_POST) && !empty($_POST)) {
 				<input type="text" class="form-control" id="category" name="category">
 			</div>
 			<div class="form-group">
-				<input type="text" class="btn btn-success" value="Add Category">
+				<input type="submit" class="btn btn-success" value="Add Category">
 			</div>
 		</form>
 	</div>
