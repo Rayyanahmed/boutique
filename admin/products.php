@@ -15,7 +15,7 @@ if (isset($_GET['add'])) {
 	</form>
 <?php } else {
 
-}
+
 
 // This is to archive our deleted products
 $sql = "SELECT * FROM products WHERE deleted = 0";
@@ -68,6 +68,6 @@ if(isset($_GET['featured'])) {
 </table>
 
 
-<?php
+<?php  }
 include('includes/footer.php');
 ?>
