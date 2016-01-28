@@ -23,6 +23,14 @@ if(isset($_GET['featured'])) {
 		<?php while($product = mysqli_fetch_assoc($presults)): 
 		// Trying to display the parent category for every product
 			$child_id = $product['categories'];
+			$catSql = "SELECT * FROM categories WHERE id = '$child_id'";
+			$result = mysqli_query($db, $catSql);
+			$cat = mysqli_fetch_assoc($result);
+			$parentID = $cat['parent_id'];
+			$pSql = "SELECT * FROM categories WHERE id = '$parentID'";
+			$presult = mysqli_query($db, $pSql);
+			$parent = mysqli_fetch_assoc($presult);
+			$category = $parent['category'] . '-' . $cat['category'];
 		?>
 			<tr>
 				<td>
@@ -31,7 +39,7 @@ if(isset($_GET['featured'])) {
 				</td>
 				<td><?php echo $product['title']; ?></td>
 				<td><?php echo money($product['price']); ?></td>
-				<td><?php echo $product['categories']; ?></td>
+				<td><?php echo $category; ?></td>
 				<td><a class="btn btn-xs btn-default" href="products.php?featured=<?php echo (($product['featured'] == 0)?'1':'0') ?>&id=<?php echo $product['id']; ?>"><span class="glyphicon glyphicon-<?php echo (($product['featured'] == 1)?'minus':'plus') ?>"></span>
 				</a>&nbsp <?php echo (($product['featured'] == 1)?'Featured Product':'') ?></td>
 				<td>0</td>
