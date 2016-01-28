@@ -8,6 +8,8 @@ include('includes/navigation.php');
 $sql = "SELECT * FROM categories WHERE parent_id = 0";
 $result = mysqli_query($db, $sql);
 
+// Process form
+
 ?>
 
 <h2 class="text-center">Categories</h2>
