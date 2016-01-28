@@ -3,7 +3,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/boutique/core/init.php');
 include('includes/head.php');
 include('includes/navigation.php');
 $brandQuery = mysqli_query($db, "SELECT * FROM brand ORDER BY brand");
-$parentQuery = "SELECT * FROM categories WHERE parent_id = 0 ORDER BY category";
+$parentQuery = mysqli_query($db, "SELECT * FROM categories WHERE parent_id = 0 ORDER BY category");
 
 if (isset($_GET['add'])) {
 
@@ -25,8 +25,12 @@ if (isset($_GET['add'])) {
 		</div>
 		<div class="form-group col-md-3">
 			<label for="parent">Parent Category:</label>
-			<select class="form-control" id="parent" name="parent"></select>
-			<option value=""></option>
+			<select class="form-control" id="parent" name="parent">
+				<option value=""></option>
+				<?php while($parent = mysqli_fetch_assoc($parentQuery)): ?>
+					<option value=""><?php echo $parent['category']; ?></option>
+				<?php endwhile; ?>
+			</select>
 		</div>
 	</form>
 <?php } else {
