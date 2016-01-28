@@ -105,7 +105,7 @@ if(isset($_GET['edit'])) {
 				<input type="text" class="form-control" id="category" name="category" value="<?php echo $category_value; ?>">
 			</div>
 			<div class="form-group">
-				<input type="submit" class="btn btn-success" value="Add Category">
+				<input type="submit" class="btn btn-success" value="<?php echo ((isset($_GET['edit']))? 'Edit': 'Add' ); ?> Category">
 			</div>
 		</form>
 	</div>
