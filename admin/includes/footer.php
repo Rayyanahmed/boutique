@@ -8,7 +8,15 @@
 
 <script>
 	function get_child_options() {
-
+		// Gets the selected parent_id from the DOM with jquery
+		var parentID = jQuery('#parent').val();
+		jQuery.ajax({
+			url: '/boutique/admin/parsers/child_categories.php',
+			type: 'POST',
+			data: {parentID: parentID},
+			success: function() {},
+			error: function() {alert("Something went wrong with the child options")},
+		});
 	}
 	jQuery('select[name="parent"]').change(get_child_options())
 </script>
