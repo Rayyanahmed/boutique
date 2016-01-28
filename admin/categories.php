@@ -64,6 +64,17 @@ if(isset($_POST) && !empty($_POST)) {
 	}
 }
 
+// This sets the proper category in the form. If you go up to edit category logic
+// You will see that there is a query that fetches the category by the ID in the 
+// $_GET request. That category is then assigned to a variable $category
+// So every time ?edit={id} is set a query is made and we have a category object 
+// available. We access the category name and assign it to $category_value to
+// display on form
+$category_value = '';
+if(isset($_GET['edit'])) {
+	$category_value = $category['category'];
+}
+
 ?>
 
 <h2 class="text-center">Categories</h2>
@@ -86,7 +97,7 @@ if(isset($_POST) && !empty($_POST)) {
 			</div>
 			<div class="form-group">
 				<label for="category">Category</label>
-				<input type="text" class="form-control" id="category" name="category">
+				<input type="text" class="form-control" id="category" name="category" value="<?php echo $category_value; ?>">
 			</div>
 			<div class="form-group">
 				<input type="submit" class="btn btn-success" value="Add Category">
