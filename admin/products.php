@@ -20,7 +20,10 @@ if(isset($_GET['featured'])) {
 <table class="table table-border table-condensed table-striped">
 	<thead><th></th><th>Product</th><th>Price</th><th>Categories</th><th>Featured</th><th>Sold</th></thead>
 	<tbody>
-		<?php while($product = mysqli_fetch_assoc($presults)): ?>
+		<?php while($product = mysqli_fetch_assoc($presults)): 
+		// Trying to display the parent category for every product
+			$child_id = $product['categories'];
+		?>
 			<tr>
 				<td>
 					<a href="?edit=<?php echo $product['id']; ?>" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-pencil"></span></a>
