@@ -18,9 +18,9 @@ $presults = mysqli_query($db, $sql);
 					<a href="?delete=<?php echo $product['id']; ?>" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-remove"></span></a>
 				</td>
 				<td><?php echo $product['title']; ?></td>
-				<td><?php echo $product['price']; ?></td>
+				<td><?php echo money($product['price']); ?></td>
 				<td><?php echo $product['categories']; ?></td>
-				<td><?php echo $product['title']; ?></td>
+				<td><a href="products.php?featured=<?php echo (($product['featured'] == 0)?'1':'0') ?>&id=<?php echo $product['id']; ?>" class="glyphicon glyphicon-<?php echo (($product['featured'] == 1)?'minus':'plus') ?>"></a></td>
 				<td><?php echo $product['title']; ?></td>
 			</tr>
 		<?php endwhile; ?>
