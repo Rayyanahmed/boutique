@@ -36,6 +36,7 @@ if(isset($_POST) && !empty($_POST)) {
 	<div class="col-md-6">
 		<form class="form" action="categories.php" method="post">
 			<legend>Add A Category</legend>
+			<div id="errors"><?php echo display_errors($errors); ?></div>
 			<div class="form-group">
 				<label for="parent">Parent</label>
 				<select class="form-control" name="parent" id="parent">
