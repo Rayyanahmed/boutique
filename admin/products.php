@@ -2,6 +2,7 @@
 require_once($_SERVER['DOCUMENT_ROOT'] . '/boutique/core/init.php');
 include('includes/head.php');
 include('includes/navigation.php');
+$brandQuery = mysqli_query("SELECT * FROM brand");
 
 if (isset($_GET['add'])) {
 
