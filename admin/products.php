@@ -20,7 +20,7 @@ $presults = mysqli_query($db, $sql);
 				<td><?php echo $product['title']; ?></td>
 				<td><?php echo money($product['price']); ?></td>
 				<td><?php echo $product['categories']; ?></td>
-				<td><a href="products.php?featured=<?php echo (($product['featured'] == 0)?'1':'0') ?>&id=<?php echo $product['id']; ?>" class="glyphicon glyphicon-<?php echo (($product['featured'] == 1)?'minus':'plus') ?>"></a></td>
+				<td><a class="btn btn-xs btn-default" href="products.php?featured=<?php echo (($product['featured'] == 0)?'1':'0') ?>&id=<?php echo $product['id']; ?>"><span class="glyphicon glyphicon-<?php echo (($product['featured'] == 1)?'minus':'plus') ?>"></span></a></td>
 				<td><?php echo $product['title']; ?></td>
 			</tr>
 		<?php endwhile; ?>
