@@ -3,6 +3,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/boutique/core/init.php');
 include('includes/head.php');
 include('includes/navigation.php');
 $brandQuery = mysqli_query($db, "SELECT * FROM brand ORDER BY brand");
+$parentQuery = "SELECT * FROM categories WHERE parent_id = 0 ORDER BY category";
 
 if (isset($_GET['add'])) {
 
@@ -21,6 +22,11 @@ if (isset($_GET['add'])) {
 					<option value="<?php echo $brand['id']; ?>"<?php ((isset($_POST['brand']) && $_POST['brand'] == $brand['id']))?'selected':''?>><?php echo $brand['brand']; ?></option>
 				<?php endwhile; ?>
 			</select>
+		</div>
+		<div class="form-group col-md-3">
+			<label for="parent">Parent Category:</label>
+			<select class="form-control" id="parent" name="parent"></select>
+			<option value=""></option>
 		</div>
 	</form>
 <?php } else {
