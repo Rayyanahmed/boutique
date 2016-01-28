@@ -34,7 +34,7 @@ if(isset($_GET['delete']) && !empty($_GET['delete'])) {
 	header("Location: categories.php");
 } 
 
-
+$category = '';
 // Process form
 $errors = array();
 if(isset($_POST) && !empty($_POST)) {
