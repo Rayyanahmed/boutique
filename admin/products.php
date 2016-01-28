@@ -2,6 +2,14 @@
 require_once($_SERVER['DOCUMENT_ROOT'] . '/boutique/core/init.php');
 include('includes/head.php');
 include('includes/navigation.php');
+
+if (isset($_GET['add'])) {
+
+?>
+<?php } else {
+
+}
+
 // This is to archive our deleted products
 $sql = "SELECT * FROM products WHERE deleted = 0";
 $presults = mysqli_query($db, $sql);
