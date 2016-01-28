@@ -14,7 +14,7 @@ if(isset($_GET['edit']) && !empty($_GET['edit'])) {
 	$edit_id = (int)$_GET['edit'];
 	$edit_id = sanitize($edit_id);
 	$edit_sql = "SELECT * FROM categories WHERE id = '$edit_id'";
-	$edit_result = mysqli_query($db, $edit_result);
+	$edit_result = mysqli_query($db, $edit_sql);
 	$category = mysqli_fetch_assoc($edit_result);
 }
 
@@ -72,7 +72,7 @@ if(isset($_POST) && !empty($_POST)) {
 
 	<!-- Form -->
 	<div class="col-md-6">
-		<form class="form" action="categories.php<?php (() ? : ) ?>" method="post">
+		<form class="form" action="categories.php<?php ((isset($_GET['edit']))? '?edit='.$edit_id: '' ) ?>" method="post">
 			<legend>Add A Category</legend>
 			<div id="errors"><?php echo display_errors($errors); ?></div>
 			<div class="form-group">
