@@ -9,6 +9,15 @@ $sql = "SELECT * FROM categories WHERE parent_id = 0";
 $result = mysqli_query($db, $sql);
 
 // Process form
+$errors = array();
+if(isset($_POST) && !empty($_POST)) {
+	$parent = sanitize($_POST['parent']);
+	$category = sanitize($_POST['category']);
+	// If category is blank
+	if($category == '') {
+		$errors[] = 'The category cannot be left blank';
+	}
+}
 
 ?>
 
