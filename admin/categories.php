@@ -30,6 +30,9 @@ $result = mysqli_query($db, $sql);
 				<label for="category">Category</label>
 				<input type="text" class="form-control" id="category" name="category">
 			</div>
+			<div class="form-group">
+				<input type="text" class="btn btn-success" value="Add Category">
+			</div>
 		</form>
 	</div>
 
