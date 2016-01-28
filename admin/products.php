@@ -2,7 +2,7 @@
 require_once($_SERVER['DOCUMENT_ROOT'] . '/boutique/core/init.php');
 include('includes/head.php');
 include('includes/navigation.php');
-$brandQuery = mysqli_query("SELECT * FROM brand");
+$brandQuery = mysqli_query($db, "SELECT * FROM brand");
 
 if (isset($_GET['add'])) {
 
@@ -16,7 +16,9 @@ if (isset($_GET['add'])) {
 		<div class="form-group col-md-3">
 			<label for="brand">Brand*</label>
 			<select class="form-control" id="brand" name="brand">
-				<option value=""></option>
+				<?php while($brand = mysqli_fetch_assoc($brandQuery)): ?>
+					<option value="<?php echo $brand['id']; ?>"><?php echo $brand['brand']; ?></option>
+				<?php endwhile; ?>
 			</select>
 		</div>
 	</form>
