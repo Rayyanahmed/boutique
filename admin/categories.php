@@ -15,7 +15,7 @@ if(isset($_GET['edit']) && !empty($_GET['edit'])) {
 	$edit_id = sanitize($edit_id);
 	$edit_sql = "SELECT * FROM categories WHERE id = '$edit_id'";
 	$edit_result = mysqli_query($db, $edit_sql);
-	$category = mysqli_fetch_assoc($edit_result);
+	$edit_category = mysqli_fetch_assoc($edit_result);
 }
 
 
@@ -72,7 +72,11 @@ if(isset($_POST) && !empty($_POST)) {
 // display on form
 $category_value = '';
 if(isset($_GET['edit'])) {
-	$category_value = $category['category'];
+	$category_value = $edit_category['category'];
+} else {
+	if(isset($_POST[''])) {
+
+	}
 }
 
 ?>
