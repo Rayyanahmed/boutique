@@ -18,6 +18,7 @@ if(isset($_GET['featured'])) {
 
 <h2 class="text-center">Products</h2>
 <!-- Button to add new product goes here -->
+<a href="products.php?add=1" class="btn btn-success pull-right" id="add-product-btn">Add Product</a><div class="clearfix"></div>
 <hr>
 <table class="table table-border table-condensed table-striped">
 	<thead><th></th><th>Product</th><th>Price</th><th>Categories</th><th>Featured</th><th>Sold</th></thead>
