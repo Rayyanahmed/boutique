@@ -10,7 +10,18 @@ $presults = mysqli_query($db, $sql);
 <h2 class="text-center">Products</h2><hr>
 <table class="table table-border table-condensed table-striped">
 	<thead><th></th><th>Product</th><th>Price</th><th>Categories</th><th>Featured</th><th>Sold</th></thead>
-	<tbody></tbody>
+	<tbody>
+		<?php while($product = mysqli_fetch_assoc($presults)): ?>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		<?php endwhile; ?>
+	</tbody>
 </table>
 
 
