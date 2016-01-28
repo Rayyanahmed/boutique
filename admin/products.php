@@ -25,12 +25,13 @@ if(isset($_GET['featured'])) {
 			$child_id = $product['categories'];
 			$catSql = "SELECT * FROM categories WHERE id = '$child_id'";
 			$result = mysqli_query($db, $catSql);
-			$cat = mysqli_fetch_assoc($result);
-			$parentID = $cat['parent_id'];
+			$child = mysqli_fetch_assoc($result);
+			$parentID = $child['parent_id'];
 			$pSql = "SELECT * FROM categories WHERE id = '$parentID'";
 			$presult = mysqli_query($db, $pSql);
 			$parent = mysqli_fetch_assoc($presult);
-			$category = $parent['category'] . '-' . $cat['category'];
+			$category = $parent['category'] . '-' . $child['category'];
+			// Idea for future. Will have nested categories. Only display immediate parent category of product
 		?>
 			<tr>
 				<td>
