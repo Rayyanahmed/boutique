@@ -32,7 +32,8 @@ if(isset($_POST) && !empty($_POST)) {
 		$display = display_errors($errors); 
 
 	} else {
-		// update database
+		$updatesql = "INSERT INTO categories (category, parent_id) VALUES ('$category', '$parent')";
+		mysqli_query($db, $updatesql);
 	}
 }
 
