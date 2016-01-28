@@ -12,7 +12,7 @@ if (isset($_GET['add'])) {
 	<form action="products.php?add=1" method="POST" entype="multipart/form-data">
 		<div class="form-group col-md-3">
 			<label for="title">Title*</label>
-			<input type="text" name="title" id="title" value="<?php echo((isset($_POST['title']))?sanitize($_POST['title']) :'') ?>">
+			<input class="form-control" type="text" name="title" id="title" value="<?php echo((isset($_POST['title']))?sanitize($_POST['title']) :'') ?>">
 		</div>
 		<div class="form-group col-md-3">
 			<label for="brand">Brand*</label>
