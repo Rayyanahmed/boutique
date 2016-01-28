@@ -14,7 +14,13 @@ if(isset($_GET['delete']) && !empty($_GET['delete'])) {
 	$delete_id = (int)($_GET['delete']);
 	$delete_id = sanitize($delete_id);
 	$dsql = "DELETE FROM categories WHERE id = '$delete_id'";
-	mysqli_query($db, $dsql);
+	$result = mysqli_query($db, $dsql);
+	$category = mysqli_fetch_assoc($result);
+	if($category['parent_id'] == 0) {
+		$csql = "DELETE FROM categories WHERE parent_id = '$delete_id'";
+		mysqli_query($csql);
+		header('Locatoin: categories.php');
+	}
 	header("Location: categories.php");
 } 
 
