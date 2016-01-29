@@ -8,6 +8,7 @@
 
 <script>
 	function get_child_options() {
+
 		// Gets the selected parent_id from the DOM with jquery
 		var parentID = jQuery('#parent').val();
 		jQuery.ajax({
@@ -23,5 +24,6 @@
 	}
 	jQuery('select[name="parent"]').change(get_child_options);
 </script>
+
 </body>
 </html>
