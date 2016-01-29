@@ -17,24 +17,19 @@ if (isset($_GET['add'])) {
 		<div class="form-group col-md-3">
 			<label for="brand">Brand*</label>
 			<select class="form-control" id="brand" name="brand">
-				<option value="<?php ((isset($_POST['brand']) && $_POST['brand'] == '')?'selected':'') ?>"></option>
+				<option value="<?php ((isset($_POST['brand']) && $_POST['brand'] == '')?' selected':'') ?>"></option>
 				<?php while($brand = mysqli_fetch_assoc($brandQuery)): ?>
-					<option value="<?php echo $brand['id']; ?>"<?php ((isset($_POST['brand']) && $_POST['brand'] == $brand['id']))?'selected':''?>><?php echo $brand['brand']; ?></option>
+					<option value="<?php echo $brand['id']; ?>"<?php ((isset($_POST['brand']) && $_POST['brand'] == $brand['id']))?' selected':''?>><?php echo $brand['brand']; ?></option>
 				<?php endwhile; ?>
 			</select>
 		</div>
 		<div class="form-group col-md-3">
-			<label for="parent">Parent Category:</label>
+			<label for="parent">Parent Category*:</label>
 			<select class="form-control" id="parent" name="parent">
-				<option value="" <?php echo ((isset($_POST['parent']) && $_POST['parent'] == '')) ? ' selected':'' ?>></option>
+				<option value=""<?php echo ((isset($_POST['parent']) && $_POST['parent'] == '')?' selected':'');?>></option>
 				<?php while($parent = mysqli_fetch_assoc($parentQuery)): ?>
-					<option value="<?php echo $parent['id']; ?>" <?php echo ((isset($_POST['parent']) && $_POST['parent'] == $parent['id']))?' select':'' ?> ><?php echo $parent['category']; ?></option>
+					<option value="<?php $parent['id']; ?>"<?php echo ((isset($_POST['parent']) && $_POST['parent'] == $parent['id'])?' select':''); ?>><?php echo $parent['category']; ?></option>
 				<?php endwhile; ?>
-			</select>
-		</div>
-		<div class="form-group col-md-3">
-			<label for="child">Child Category:*</label>
-			<select id="child" name="child" class="form-control">
 			</select>
 		</div>
 	</form>
