@@ -6,6 +6,13 @@ $brandQuery = mysqli_query($db, "SELECT * FROM brand ORDER BY brand");
 $parentQuery = mysqli_query($db, "SELECT * FROM categories WHERE parent_id = 0 ORDER BY category");
 
 if($_POST) {
+	$title = sanitize($_POST['title']);
+	$brand = sanitize($_POST['brand']);
+	$categories = sanitize($_POST['child']);
+	$price = sanitize($_POST['price']);
+	$list_price = sanitize($_POST['list_price']);
+	$sizes = sanitize($_POST['sizes']);
+	$description = sanitize($_POST['description']);
 	$errors = array();
 	if(!empty($_POST['sizes'])) {
 		$sizeString = sanitize($_POST['sizes']);
@@ -31,8 +38,7 @@ if($_POST) {
 	// Ready for photo validation
 	if(!empty($_FILES)) {
 		var_dump($_FILES);
-		$files = $_FILES;
-		$photo = $_FILES[0];
+		$photo = $_FILES['photo'];
 		$name = $photo['name'];
 		$nameArray = explode('.', $name);
 		$filename = $nameArray[0];
@@ -42,6 +48,13 @@ if($_POST) {
 		$mimeExt = $mime[1];
 		$tmpLoc = $photo['type'];
 		$fileSize = $photo['size'];
+		$allowed = array('png', 'jpg', 'jpeg', 'gif');
+		if($mimeType != 'image') {
+			$errors[] = 'The file must be an image';
+		}
+		if (!in_array($fileExt, $allow)) {
+			$errors[] = 'The photo extension must be a png, jpeg, jpg, or gif';
+		}
 	}
 
 	if(!empty($errors)) {
