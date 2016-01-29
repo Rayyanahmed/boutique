@@ -75,8 +75,15 @@ if (isset($_GET['add'])) {
         <h4 class="modal-title" id="sizesModalLabel">Size & Quantity</h4>
       </div>
       <div class="modal-body">
-        <?php for(); ?>
-
+        <?php for($i = 1; $i <= 12; $i++): ?>
+        	<div class="form-group col-md-4">
+        		<label for="size<?php echo $i; ?>">Size:</label>
+        		<input type="text" class="form-control" name="size<?php echo $i; ?>" value="" id="size<?php echo $i; ?>">
+        	</div>
+        	<div class="form-group col-md-2">
+        		<label for="qty<?php echo $i; ?>">Quantity:</label>
+        		<input type="number" class="form-control" name="qty<?php echo $i; ?>" value="" min=0 id="qty<?php echo $i; ?>">
+        	</div>
     	<?php endfor; ?>
       </div>
       <div class="modal-footer">
