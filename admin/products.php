@@ -75,6 +75,8 @@ if (isset($_GET['add'])) {
         <h4 class="modal-title" id="sizesModalLabel">Size & Quantity</h4>
       </div>
       <div class="modal-body">
+      	<div class="container-fluid">
+      	<!-- Notes the form md-col still add to 12 to take up modal -->
         <?php for($i = 1; $i <= 12; $i++): ?>
         	<div class="form-group col-md-4">
         		<label for="size<?php echo $i; ?>">Size:</label>
@@ -85,6 +87,7 @@ if (isset($_GET['add'])) {
         		<input type="number" class="form-control" name="qty<?php echo $i; ?>" value="" min=0 id="qty<?php echo $i; ?>">
         	</div>
     	<?php endfor; ?>
+    	</div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
