@@ -37,6 +37,15 @@ if (isset($_GET['add'])) {
 			<select id="child" name="child" class="form-control">
 			</select>
 		</div>
+		<div class="form-group col-md-3">
+			<label for="price">Price:*</label>
+			<input type="text" id="price" name="price" class="form-control" value="<?php echo ((isset($_POST['price']))?$_POST['price']:''); ?>">
+		</div>
+		<div class="form-group col-md-3">
+			<label for="list_price">List Price:*</label>
+			<input type="text" id="list_price" name="list_price" class="form-control" value="<?php echo ((isset($_POST['list_price']))?$_POST['price']:''); ?>">
+		</div>
+
 	</form>
 <?php } else {
 
