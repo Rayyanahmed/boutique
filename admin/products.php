@@ -60,7 +60,9 @@ if($_POST) {
 	if(!empty($errors)) {
 		echo display_errors($errors);
 	} else {
-		// Upload file and insert into database
+		// Will handle photo later
+		$insertSql = "INSERT INTO products (`title`, `price`, `list_price`, `brand`, `catgories`, `sizes`) 
+					VALUES ('$title', '$price', '$list_price', '$brand', '$categories', '$sizes')";
 	}
 }
 if (isset($_GET['add'])) {
@@ -84,7 +86,7 @@ if (isset($_GET['add'])) {
 		<div class="form-group col-md-3">
 			<label for="parent">Parent Category*:</label>
 			<select class="form-control" id="parent" name="parent">
-				<option value=""<?php echo ((isset($_POST['parent']) && $_POST['parent'] == '')?' selected':'');?>></option>
+				<option value="<?php echo ((isset($_POST['parent']) && $_POST['parent'] == '')?' selected':'');?>"></option>
 				<?php while($parent = mysqli_fetch_assoc($parentQuery)): ?>
 					<option value="<?php $parent['id']; ?>"<?php echo ((isset($_POST['parent']) && $_POST['parent'] == $parent['id'])?' select':''); ?>><?php echo $parent['category']; ?></option>
 				<?php endwhile; ?>

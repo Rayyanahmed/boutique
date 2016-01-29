@@ -25,6 +25,7 @@
 
 		// Gets the selected parent_id from the DOM with jquery
 		var parentID = jQuery('#parent').val();
+		console.log(parentID);
 		jQuery.ajax({
 			url: '/boutique/admin/parsers/child_categories.php',
 			type: 'POST',
