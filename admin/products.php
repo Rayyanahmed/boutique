@@ -11,8 +11,8 @@ if($_POST) {
 		$sizeString = sanitize($_POST['sizes']);
 		// When going through the loop we have a comma at the very end so we are
 		// going to get rid of that with this rtrim function
-		$sizesString = rtrim($sizeString, ',');
-		$sizesArray = explode(',', $sizesArray);
+		$sizeString = rtrim($sizeString, ',');
+		$sizesArray = explode(',', $sizeString);
 		$sArray = array();
 		$qArray = array();
 		foreach($sizesArray as $ss) {
@@ -21,12 +21,13 @@ if($_POST) {
 			$qArray[] = $s[1];
 		}
 	} else { $sizesArray = array();}
-	$required = array('title', 'price', 'brand', 'parent', 'child', 'sizes');
+	$required = array('title', 'price', 'brand', 'parent', 'sizes');
 	foreach($required as $field) {
 		if($_POST[$field] == '') {
 			$errors[] = 'You cannot leave ' . $field . ' empty';
 		}
 	}
+
 	if(!empty($errors)) {
 		echo display_errors($errors);
 	} else {
