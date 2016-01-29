@@ -4,6 +4,7 @@ include('includes/head.php');
 include('includes/navigation.php');
 $brandQuery = mysqli_query($db, "SELECT * FROM brand ORDER BY brand");
 $parentQuery = mysqli_query($db, "SELECT * FROM categories WHERE parent_id = 0 ORDER BY category");
+$sizesArray = array();
 
 if (isset($_GET['add'])) {
 
