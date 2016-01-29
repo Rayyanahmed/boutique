@@ -45,7 +45,14 @@ if (isset($_GET['add'])) {
 			<label for="list_price">List Price:*</label>
 			<input type="text" id="list_price" name="list_price" class="form-control" value="<?php echo ((isset($_POST['list_price']))?$_POST['price']:''); ?>">
 		</div>
-
+		<div class="form-group col-md-3">
+			<label>Quantity & Sizes:*</label>
+			<button class="btn btn-default" onclick="jQuery('#sizeModal').modal('toggle');return false;">Quantity & Sizes</button>
+		</div>
+		<div class="form-group col-md-3">
+			<label for="sizes">Sizes & Qty Preview</label>
+			<input type="text"  class="form-control" name="sizes" id="sizes" value="<?php echo ((isset($_POST['sizes']))?$_POST['sizes']:'') ?>" readonly>
+		</div>
 	</form>
 <?php } else {
 
