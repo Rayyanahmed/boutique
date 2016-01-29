@@ -28,6 +28,11 @@ if($_POST) {
 		}
 	}
 
+	// Ready for photo validation
+	if(!empty($_FILES)) {
+		var_dump($_FILES);
+	}
+
 	if(!empty($errors)) {
 		echo display_errors($errors);
 	} else {
