@@ -8,7 +8,17 @@
 
 <script>
 	function updateSizes() {
-		alert('update sizes');
+		// start with size string loop through all size qty fields. If the field is empty then skip over
+		// otherwise add it to your size string
+		// finally once the loop is over set the value of the preview field in our form to that size string to be 
+		// saved later
+		var sizeString = '';
+		for($i = 1; $i <= 12; $i++) {
+			if(jQuery('#size' + $i).val() != '') {
+				sizeString += jQuery('#size' + $i).val() + ':' + jQuery('#qty' + $i).val() + ',';
+			}
+		}
+		jQuery('#sizes').val(sizeString);
 	}
 
 	function get_child_options() {
