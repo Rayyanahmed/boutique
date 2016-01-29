@@ -7,6 +7,10 @@
 	</footer>
 
 <script>
+	function updateSizes() {
+		alert('update sizes');
+	}
+
 	function get_child_options() {
 
 		// Gets the selected parent_id from the DOM with jquery
