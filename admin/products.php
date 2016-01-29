@@ -53,6 +53,10 @@ if (isset($_GET['add'])) {
 			<label for="sizes">Sizes & Qty Preview</label>
 			<input type="text"  class="form-control" name="sizes" id="sizes" value="<?php echo ((isset($_POST['sizes']))?$_POST['sizes']:'') ?>" readonly>
 		</div>
+		<div class="form-group col-md-6">
+			<label for="photo">Product Photo:</label>
+			<input type="file" name="photo" id="photo" class="form-control">
+		</div>
 	</form>
 <?php } else {
 
