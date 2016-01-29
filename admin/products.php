@@ -75,7 +75,9 @@ if (isset($_GET['add'])) {
         <h4 class="modal-title" id="sizesModalLabel">Size & Quantity</h4>
       </div>
       <div class="modal-body">
-        ...
+        <?php for(); ?>
+
+    	<?php endfor; ?>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
