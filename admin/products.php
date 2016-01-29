@@ -4,8 +4,23 @@ include('includes/head.php');
 include('includes/navigation.php');
 $brandQuery = mysqli_query($db, "SELECT * FROM brand ORDER BY brand");
 $parentQuery = mysqli_query($db, "SELECT * FROM categories WHERE parent_id = 0 ORDER BY category");
-$sizesArray = array();
 
+if($_POST) {
+	if(!empty($_POST['sizes'])) {
+		$sizeString = sanitize($_POST['sizes']);
+		// When going through the loop we have a comma at the very end so we are
+		// going to get rid of that with this rtrim function
+		$sizesString = rtrim($sizeString, ',');
+		$sizesArray = explode(',', $sizesArray);
+		$sArray = array();
+		$qArray = array();
+		foreach($sizesArray as $ss) {
+			$s = explode(':', $ss);
+			$sArray[] = $s[0];
+			$qArray[] = $s[1];
+		}
+	} else { $sizesArray = array();}
+}
 if (isset($_GET['add'])) {
 
 ?>
