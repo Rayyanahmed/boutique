@@ -24,7 +24,7 @@ if($_POST) {
 	$required = array('title', 'price', 'brand', 'parent', 'child', 'sizes');
 	foreach($required as $field) {
 		if($_POST[$field] == '') {
-			$errors[] = 'All fields with an Astrik are required';
+			$errors[] = 'You cannot leave ' . $field . ' empty';
 		}
 	}
 	if(!empty($errors)) {
