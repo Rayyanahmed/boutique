@@ -96,11 +96,11 @@ if (isset($_GET['add'])) {
         <?php for($i = 1; $i <= 12; $i++): ?>
         	<div class="form-group col-md-4">
         		<label for="size<?php echo $i; ?>">Size:</label>
-        		<input type="text" class="form-control" name="size<?php echo $i; ?>" value="" id="size<?php echo $i; ?>">
+        		<input type="text" class="form-control" name="size<?php echo $i; ?>" value="<?php echo ((!empty($sArray[$i-1]))?$sArray[$i-1]:''); ?>" id="size<?php echo $i; ?>">
         	</div>
         	<div class="form-group col-md-2">
         		<label for="qty<?php echo $i; ?>">Quantity:</label>
-        		<input type="number" class="form-control" name="qty<?php echo $i; ?>" value="" min=0 id="qty<?php echo $i; ?>">
+        		<input type="number" class="form-control" name="qty<?php echo $i; ?>" value="<?php echo ((!empty($qArray[$i-1]))?$qArray[$i-1]:''); ?>" min=0 id="qty<?php echo $i; ?>">
         	</div>
     	<?php endfor; ?>
     	</div>
