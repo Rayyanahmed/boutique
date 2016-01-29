@@ -57,6 +57,13 @@ if (isset($_GET['add'])) {
 			<label for="photo">Product Photo:</label>
 			<input type="file" name="photo" id="photo" class="form-control">
 		</div>
+		<div class="form-group col-md-6">
+			<label for="description">Description:</label>
+			<textarea name="description" id="description" rows="6" class="form-control"></textarea>
+		</div>
+		<div class="form-group pull-right col-md-3">
+			<input type="submit" value="Add Product" class="form-control btn btn-success pull-right">
+		</div>
 	</form>
 <?php } else {
 
