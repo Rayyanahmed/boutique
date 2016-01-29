@@ -2,7 +2,7 @@
 require_once($_SERVER['DOCUMENT_ROOT'] . '/boutique/core/init.php');
 
 
-// Something is wrong I am getting only parent categories while trying to fetch child categories
+// Query is fine, but ajax request is not sending the proper ID
 
 $parentID = (int)($_POST['parentID']);
 $childQuery = mysqli_query($db, "SELECT * FROM categories WHERE parent_id = '$parentID' ORDER BY category");
