@@ -6,6 +6,7 @@ $brandQuery = mysqli_query($db, "SELECT * FROM brand ORDER BY brand");
 $parentQuery = mysqli_query($db, "SELECT * FROM categories WHERE parent_id = 0 ORDER BY category");
 
 if($_POST) {
+	$errors = array();
 	if(!empty($_POST['sizes'])) {
 		$sizeString = sanitize($_POST['sizes']);
 		// When going through the loop we have a comma at the very end so we are
@@ -21,6 +22,16 @@ if($_POST) {
 		}
 	} else { $sizesArray = array();}
 	$required = array('title', 'price', 'brand', 'parent', 'child', 'sizes');
+	foreach($required as $field) {
+		if($_POST[$field] == '') {
+			$errors[] = 'All fields with an Astrik are required';
+		}
+	}
+	if(!empty($errors)) {
+		echo display_errors($errors);
+	} else {
+		// Upload file and insert into database
+	}
 }
 if (isset($_GET['add'])) {
 
