@@ -124,7 +124,7 @@ if (isset($_GET['add']) || isset($_GET['edit'])) {
 		</div>
 		<div class="form-group pull-right col-md-3">
 			<a href="products.php" class="btn btn-default">Cancel</a>
-			<input type="submit" value="Add Product" class="form-control btn btn-success pull-right">
+			<input type="submit" value="<?php echo ((isset($_GET['edit']))?'Edit':'Add') ?> Product" class="btn btn-success pull-right">
 		</div>
 	</form>
 
