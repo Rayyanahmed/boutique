@@ -123,6 +123,7 @@ if (isset($_GET['add']) || isset($_GET['edit'])) {
 			<textarea name="description" id="description" rows="6" class="form-control"></textarea>
 		</div>
 		<div class="form-group pull-right col-md-3">
+			<a href="products.php" class="btn btn-default">Cancel</a>
 			<input type="submit" value="Add Product" class="form-control btn btn-success pull-right">
 		</div>
 	</form>
