@@ -4,6 +4,9 @@ include('includes/head.php');
 include('includes/navigation.php');
 $brandQuery = mysqli_query($db, "SELECT * FROM brand ORDER BY brand");
 $parentQuery = mysqli_query($db, "SELECT * FROM categories WHERE parent_id = 0 ORDER BY category");
+// This will prevent getting errors
+$title = ((isset($_POST['title']) && $_POST['title'] != '')?sanitize($_POST['title']):'');
+
 
 if(isset($_GET['edit'])) {
 	// We have to know this in order to know what to put in form action
@@ -79,7 +82,7 @@ if (isset($_GET['add']) || isset($_GET['edit'])) {
 	<form action="products.php?<?php echo ((isset($_GET['edit']))?'edit'.$edit_id:'add=1'); ?>" method="POST" entype="multipart/form-data">
 		<div class="form-group col-md-3">
 			<label for="title">Title*</label>
-			<input class="form-control" type="text" name="title" id="title" value="<?php echo((isset($_POST['title']))?sanitize($_POST['title']) :'') ?>">
+			<input class="form-control" type="text" name="title" id="title" value="<?php echo $title; ?>">
 		</div>
 		<div class="form-group col-md-3">
 			<label for="brand">Brand*</label>
