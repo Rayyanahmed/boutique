@@ -4,17 +4,19 @@ include('includes/head.php');
 include('includes/navigation.php');
 $brandQuery = mysqli_query($db, "SELECT * FROM brand ORDER BY brand");
 $parentQuery = mysqli_query($db, "SELECT * FROM categories WHERE parent_id = 0 ORDER BY category");
-// This will prevent getting errors
-$title = ((isset($_POST['title']) && $_POST['title'] != '')?sanitize($_POST['title']):'');
-
 
 if(isset($_GET['edit'])) {
 	// We have to know this in order to know what to put in form action
 	$edit_id = (int)$_GET['edit'];
 	// We have to fetch the product we are editing by using edit_id
 	$product_result = mysqli_query($db, "SELECT * FROM products WHERE id = '$edit_id'");
-	$productResults = mysqli_fetch_assoc($product_result);
-	$title = $productResults['title'];
+	$product = mysqli_fetch_assoc($product_result);
+	$title = ((isset($_POST['title']) && !empty($_POST['title']))?sanitize($_POST['title']):$product['title'])	
+	
+	$price = $productResults['price'];
+	$list_price = $productResults['list_price'];
+	$sizes = $productResults['sizes'];
+	$description = $productResults['description'];
 }
 
 if($_POST) {
