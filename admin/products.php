@@ -6,6 +6,7 @@ $brandQuery = mysqli_query($db, "SELECT * FROM brand ORDER BY brand");
 $parentQuery = mysqli_query($db, "SELECT * FROM categories WHERE parent_id = 0 ORDER BY category");
 
 if(isset($_GET['edit'])) {
+	// We have to know this in order to know what to put in form action
 	$edit_id = (int)$_GET['edit'];
 }
 
