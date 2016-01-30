@@ -14,6 +14,7 @@ if(isset($_GET['edit'])) {
 	// We have to fetch the product we are editing by using edit_id
 	$product_result = mysqli_query($db, "SELECT * FROM products WHERE id = '$edit_id'");
 	$productResults = mysqli_fetch_assoc($product_result);
+	$title = $productResults['title'];
 }
 
 if($_POST) {
