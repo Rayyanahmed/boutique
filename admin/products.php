@@ -74,6 +74,7 @@ if (isset($_GET['add']) || isset($_GET['edit'])) {
 
 ?>
 	<h2 class="text-center"><?php echo ((isset($_GET['edit']))?'Edit':'Add A New'); ?> Product</h2><tr>
+	<!-- We want to change this action incase we are editing a product -->
 	<form action="products.php?<?php echo ((isset($_GET['edit']))?'edit'.$edit_id:'add=1'); ?>" method="POST" entype="multipart/form-data">
 		<div class="form-group col-md-3">
 			<label for="title">Title*</label>
