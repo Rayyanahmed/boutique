@@ -14,6 +14,7 @@ $brand = $brand_array['brand'];
 // If we want to dynamically add sizes we can loop through the array if the key doesn't exist then add the key
 // and set the value equal to one
 $size_string = $product['sizes'];
+$size_string = rtrim($size_string, ',');
 // Everytime it sees a comma it will make a new array
 $size_array = explode(',', $size_string);
 

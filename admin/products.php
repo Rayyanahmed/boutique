@@ -61,14 +61,15 @@ if($_POST) {
 		echo display_errors($errors);
 	} else {
 		// Will handle photo later
-		$insertSql = "INSERT INTO products (`title`, `price`, `list_price`, `brand`, `catgories`, `sizes`) 
-					VALUES ('$title', '$price', '$list_price', '$brand', '$categories', '$sizes')";
+		$insertSql = "INSERT INTO products (`title`, `price`, `list_price`, `brand_id`, `categories`, `sizes`, `description`) 
+					VALUES ('$title', '$price', '$list_price', '$brand', '$categories', '$sizes', '$description')";
+		mysqli_query($db, $insertSql);
 	}
 }
-if (isset($_GET['add'])) {
+if (isset($_GET['add']) || isset($_GET['edit'])) {
 
 ?>
-	<h2 class="text-center">Add A New Product</h2><tr>
+	<h2 class="text-center"><?php echo ((isset($_GET['edit']))?'Edit':'Add A New'); ?> Product</h2><tr>
 	<form action="products.php?add=1" method="POST" entype="multipart/form-data">
 		<div class="form-group col-md-3">
 			<label for="title">Title*</label>
