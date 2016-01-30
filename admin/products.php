@@ -5,6 +5,10 @@ include('includes/navigation.php');
 $brandQuery = mysqli_query($db, "SELECT * FROM brand ORDER BY brand");
 $parentQuery = mysqli_query($db, "SELECT * FROM categories WHERE parent_id = 0 ORDER BY category");
 
+if(isset($_GET['edit'])) {
+	$edit_id = (int)$_GET['edit'];
+}
+
 if($_POST) {
 	$title = sanitize($_POST['title']);
 	$brand = sanitize($_POST['brand']);
@@ -70,7 +74,7 @@ if (isset($_GET['add']) || isset($_GET['edit'])) {
 
 ?>
 	<h2 class="text-center"><?php echo ((isset($_GET['edit']))?'Edit':'Add A New'); ?> Product</h2><tr>
-	<form action="products.php?add=1" method="POST" entype="multipart/form-data">
+	<form action="products.php?<?php echo ((isset($_GET['edit']))?'edit'.$edit_id:'add=1'); ?>" method="POST" entype="multipart/form-data">
 		<div class="form-group col-md-3">
 			<label for="title">Title*</label>
 			<input class="form-control" type="text" name="title" id="title" value="<?php echo((isset($_POST['title']))?sanitize($_POST['title']) :'') ?>">
