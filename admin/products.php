@@ -11,6 +11,9 @@ $title = ((isset($_POST['title']) && $_POST['title'] != '')?sanitize($_POST['tit
 if(isset($_GET['edit'])) {
 	// We have to know this in order to know what to put in form action
 	$edit_id = (int)$_GET['edit'];
+	// We have to fetch the product we are editing by using edit_id
+	$product_result = mysqli_query($db, "SELECT * FROM products WHERE id = '$edit_id'");
+	$productResults = mysqli_fetch_assoc($product_result);
 }
 
 if($_POST) {
